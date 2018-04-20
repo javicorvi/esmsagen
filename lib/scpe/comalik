@@ -1,0 +1,74 @@
+#!/bin/bash
+#$ -S /bin/sh
+
+count=0
+
+ for i in `cat listascpe`
+ do
+
+  rsync /raid/gustavo/Corridas/mat$i/$i.lista .
+  rsync /raid/gustavo/Corridas/mat$i/$i.phy .
+  rsync /raid/gustavo/Corridas/Fam/$i.fam .
+  ./search.exe $i    #relaciona una estructura de referencia con el numero de familia usado para calcular RMS
+
+ rsync $i.fam listaestructuras #esto tiene informacion de las estructuars en la familia a analizar
+ 
+
+ for j in `cat listaestructuras`     #listacopyouts contiene la informacion de la familia mencionadas/se copia a este directorio el *ini.out (RMS)
+ do
+ rsync /raid/gustavo/mamm*/$j .
+   if [ ! -f $j ]
+    then
+           echo "$j" >> estructurasnoestan
+    fi
+ done
+
+
+ for j in `cat listaestructuras`
+ do
+
+   rsync /raid/gustavo/Corridas/LIKS/$j.out .
+   if [ ! -f $j.out ]
+    then
+           echo "$j" >> liksnoestan
+    fi
+
+   rsync ../effecti*/$j.energia .
+   rsync ../Contactos/$j.contactos-scpe .
+   cat $j.contactos-scpe $j.energia > k1
+   rm $j.energia
+   sed 'N;s/\n/\ /' < k1 > $j.energia
+
+   if [ ! -f $j.energia ]
+    then
+           echo "$j" >> energianoestan
+    fi
+
+   if [ $i != $j ]
+   then
+   rsync /raid/gustavo/Corridasfam/mat$j*/$j.lista .
+   if [ ! -f $j.lista ]
+          then
+           echo "$j" >> listanoestan
+    fi
+
+   fi
+   rm $j
+ done
+
+  ./relativefull.exe $i    #calcula la numercaion en comun para todas las estructuras de una dada proteina
+  mv listacomun $i.comun
+
+  ./armarlik.exe $i.fam  $i.comun $i.phy  $count
+  cat lik.data >> lik-all.data
+
+  cat lik-stat.data >> sigma-rms.data
+
+  cat lik-pares.data >> lik-all-pares.data
+
+  count=`expr $count + 1`
+  echo $count
+
+  rm *.lista *.comun *.fam  *.phy *.out *energia *contactos-scpe
+
+done

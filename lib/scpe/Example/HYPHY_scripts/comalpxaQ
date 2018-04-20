@@ -1,0 +1,10 @@
+ for j in `cat list`
+  do
+  for i in `cat class262`
+  do
+  rsync ../scpesingle/Lpxa/$j-$i.dat  . 
+       mv $j-$i.dat lpxaQ-$i.dat
+  done
+  ../HYPHY_Source/HYPHY lpxaQ.bf 
+done
+
