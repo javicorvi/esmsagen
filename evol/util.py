@@ -97,6 +97,26 @@ def sincronize_natural_evol_msas(input_folder,output_folder,pattern_array,reg_in
     print "sincronize_natural_evol_alignments"
     print("--- %s seconds ---" % (time.time() - start_time))
 
+def sincronize_natural_evol_msa(input_,output_,pattern_array,reg_init,reg_end_back):
+    start_time = time.time()
+    print "sincronize_natural_evol_alignments"
+    count=0
+    
+    if input_.endswith(".cluster") & any(r in input_ for r in pattern_array):
+        with open(output_,'w') as new_file:
+            with open(input_) as old_file:
+                for line in old_file:
+                    if('>' in line):
+                        line = line.replace('\n','_'+str(count)+'\n')
+                        new_file.write(line)
+                        count=count+1
+                    else:
+                        new_file.write(line[reg_init:reg_end_back]+'\n')    
+        old_file.close()
+        new_file.close()
+    print "sincronize_natural_evol_alignments"
+    print("--- %s seconds ---" % (time.time() - start_time))
+
 '''
 Sincroniza y corta los msa evolucionados teniendo en cuenta solo la escructura en comun que existe entre los pdb de la familia
 Recibe el pdf recortado con las posiciones que deben mantenerse luego elimina las posiciones del msa evolucionado.

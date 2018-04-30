@@ -120,11 +120,18 @@ def roc_curve_(y_true,scores,labels,title,colors,legend_title,output_file, verti
     plt.figure()
     #for i, (a, b) in enumerate(zip(alist, blist)):
     for i,(label,color) in enumerate(zip(labels, colors)):
+        '''
+        fix empty scores and targets
+        if((not y_true[i]) & (not scores[i])):
+            fpr[i], tpr[i] = 0.5,0.5
+        else:
+        '''
         fpr[i], tpr[i], _ = metrics.roc_curve(y_true[i], scores[i])
         partial_auc_value_0_1 = partial_auc(fpr[i], tpr[i], 0.1)
         auc = metrics.auc(fpr[i], tpr[i])
         roc_auc[i] = auc
         plt.plot(fpr[i], tpr[i], color=color, lw=lw,label='{0} (auc = {1:0.4f} | auc 0.1 = {2:0.4f})'''.format(label, roc_auc[i], partial_auc_value_0_1))
+    
     plt.plot([0, 1], [0, 1], color='black', lw=lw, linestyle='--')
     if(vertical_at_01):
         plt.axvline(x=0.1,color=vertical_line_color)
@@ -538,7 +545,7 @@ def contact_map_sum_top_mi_matrix(mat1, mat2,output_file,title='Contact Map'):
 
 def dendogram_matrix(Z, output_path,title,labels):
     
-    plt.figure(figsize=(5, 5))
+    plt.figure(figsize=(8, 8))
     plt.title(title)
     #plt.xlabel('Indice de entrada (1-50,51-100,101-150)')
     #plt.ylabel('Distancia')
@@ -546,3 +553,4 @@ def dendogram_matrix(Z, output_path,title,labels):
     dendrogram(Z,leaf_rotation=90.,leaf_font_size=10.,show_contracted=True,labels=labels, orientation='top')
     #plt.axhline(y=max_d, c='k') 
     plt.savefig(output_path)
+    plt.gcf().clear()

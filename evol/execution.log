@@ -6549,3 +6549,1391 @@ Name: runs, dtype: int64
 2018-04-20 16:47:38,688 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
 2018-04-20 16:47:42,622 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
 2018-04-20 16:47:46,454 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-20 17:03:41,515 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-20 17:03:41,533 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-20 17:03:41,537 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-20 17:03:42,378 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-20 17:03:45,873 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-20 17:03:49,817 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-20 17:03:53,648 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-20 17:03:57,558 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-20 17:04:01,531 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-20 17:04:05,506 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-20 17:04:09,416 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-23 11:31:45,613 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 11:32:46,177 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 11:32:59,295 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:33:14,307 - ERROR - evol.py - optimize_evolution - Error with beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:35:40,692 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 11:35:52,606 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:39:28,653 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 11:39:36,448 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:40:19,229 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:40:22,836 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.60711097717 seconds --- 
+2018-04-23 11:40:28,545 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:40:32,709 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.16432499886 seconds --- 
+2018-04-23 11:40:35,041 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:40:35,090 - INFO - msa.py - psicov - Time of Execution --- 0.0482928752899 seconds --- 
+2018-04-23 11:42:34,296 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 11:42:34,297 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:42:45,557 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:42:49,288 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.73065090179 seconds --- 
+2018-04-23 11:42:49,288 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:42:53,335 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.04703807831 seconds --- 
+2018-04-23 11:42:53,335 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:42:53,361 - INFO - msa.py - psicov - Time of Execution --- 0.0256850719452 seconds --- 
+2018-04-23 11:42:53,519 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA 
+2018-04-23 11:42:53,521 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:43:04,601 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:43:08,191 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.58947086334 seconds --- 
+2018-04-23 11:43:08,191 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:43:12,196 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.0053498745 seconds --- 
+2018-04-23 11:43:12,197 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:43:12,246 - INFO - msa.py - psicov - Time of Execution --- 0.0488109588623 seconds --- 
+2018-04-23 11:43:12,328 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB 
+2018-04-23 11:43:12,329 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:43:23,331 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:43:26,861 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.53006601334 seconds --- 
+2018-04-23 11:43:26,862 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:43:30,776 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 3.91427516937 seconds --- 
+2018-04-23 11:43:30,776 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:43:30,785 - INFO - msa.py - psicov - Time of Execution --- 0.00902104377747 seconds --- 
+2018-04-23 11:43:30,901 - INFO - evol.py - optimize_evolution - Run Optimization For 2H74 
+2018-04-23 11:43:30,904 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:43:41,864 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:43:45,386 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.52268505096 seconds --- 
+2018-04-23 11:43:45,386 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:43:49,359 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 3.97258806229 seconds --- 
+2018-04-23 11:43:49,359 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:43:49,364 - INFO - msa.py - psicov - Time of Execution --- 0.00452613830566 seconds --- 
+2018-04-23 11:43:49,469 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M5 
+2018-04-23 11:43:49,472 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:44:00,459 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:44:04,014 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.55510592461 seconds --- 
+2018-04-23 11:44:04,014 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:44:07,917 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 3.90335607529 seconds --- 
+2018-04-23 11:44:07,918 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:44:07,960 - INFO - msa.py - psicov - Time of Execution --- 0.0419239997864 seconds --- 
+2018-04-23 11:44:08,082 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M7 
+2018-04-23 11:44:08,084 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:44:19,114 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:44:22,652 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.53770685196 seconds --- 
+2018-04-23 11:44:22,652 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:44:26,654 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.00207686424 seconds --- 
+2018-04-23 11:44:26,696 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:44:26,745 - INFO - msa.py - psicov - Time of Execution --- 0.049742937088 seconds --- 
+2018-04-23 11:44:26,853 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-23 11:44:26,854 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:44:37,888 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:44:41,514 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.62686991692 seconds --- 
+2018-04-23 11:44:41,515 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:44:45,462 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 3.94704294205 seconds --- 
+2018-04-23 11:44:45,462 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:44:45,513 - INFO - msa.py - psicov - Time of Execution --- 0.0508809089661 seconds --- 
+2018-04-23 11:44:45,629 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA_M17 
+2018-04-23 11:44:45,631 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 1.0 run 1000 
+2018-04-23 11:44:56,667 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 11:45:00,123 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.45616102219 seconds --- 
+2018-04-23 11:45:00,123 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 11:45:03,969 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 3.84630203247 seconds --- 
+2018-04-23 11:45:03,970 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 11:45:04,006 - INFO - msa.py - psicov - Time of Execution --- 0.0357117652893 seconds --- 
+2018-04-23 11:45:05,206 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-23 11:45:05,224 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-23 11:45:05,228 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-23 11:45:06,045 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-23 11:45:09,627 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-23 11:45:13,304 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-23 11:45:17,035 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-23 11:45:20,855 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-23 11:45:24,719 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-23 11:45:28,745 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-23 11:45:32,606 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-23 12:21:46,177 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-23 12:21:46,178 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-23 12:22:22,013 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M5 
+2018-04-23 12:22:22,014 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-23 12:29:13,796 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 12:30:01,907 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 48.1110460758 seconds --- 
+2018-04-23 12:30:01,908 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 12:30:48,930 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 47.0226809978 seconds --- 
+2018-04-23 12:30:48,956 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 12:34:14,601 - INFO - msa.py - psicov - Time of Execution --- 205.645280838 seconds --- 
+2018-04-23 12:34:14,783 - INFO - evol.py - optimize_evolution - Calculation of beta 0.01 nsus 20.0 run 20000 
+2018-04-23 12:41:16,297 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 12:42:04,454 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 48.1564571857 seconds --- 
+2018-04-23 12:42:04,454 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 12:42:52,230 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 47.7761659622 seconds --- 
+2018-04-23 12:42:52,245 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 12:43:29,592 - INFO - msa.py - psicov - Time of Execution --- 37.3473460674 seconds --- 
+2018-04-23 12:43:29,860 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 20.0 run 20000 
+2018-04-23 12:52:05,545 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 12:53:05,010 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 59.4652998447 seconds --- 
+2018-04-23 12:53:05,010 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 12:54:04,978 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.968173027 seconds --- 
+2018-04-23 12:54:04,995 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 12:54:48,807 - INFO - msa.py - psicov - Time of Execution --- 43.8112769127 seconds --- 
+2018-04-23 12:54:49,062 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-23 13:10:53,031 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 13:13:00,445 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 127.413241863 seconds --- 
+2018-04-23 13:13:00,445 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 13:15:07,748 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 127.302850962 seconds --- 
+2018-04-23 13:15:07,774 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 13:16:36,310 - INFO - msa.py - psicov - Time of Execution --- 88.5366439819 seconds --- 
+2018-04-23 13:16:36,503 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-23 13:52:23,379 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 13:57:38,332 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 314.953279018 seconds --- 
+2018-04-23 13:57:38,332 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 14:02:54,436 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 316.103825092 seconds --- 
+2018-04-23 14:02:54,477 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 14:06:25,636 - INFO - msa.py - psicov - Time of Execution --- 211.158594131 seconds --- 
+2018-04-23 14:06:25,829 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-23 15:22:02,316 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-23 15:22:02,385 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-23 15:28:46,699 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 15:29:30,798 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 44.0998270512 seconds --- 
+2018-04-23 15:29:30,799 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 15:30:17,452 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 46.6533260345 seconds --- 
+2018-04-23 15:30:17,466 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 15:30:58,695 - INFO - msa.py - psicov - Time of Execution --- 41.2289087772 seconds --- 
+2018-04-23 15:30:59,070 - INFO - evol.py - optimize_evolution - Calculation of beta 0.01 nsus 20.0 run 20000 
+2018-04-23 15:37:52,841 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 15:38:38,697 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 45.85531497 seconds --- 
+2018-04-23 15:38:38,697 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 15:39:24,957 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 46.2606379986 seconds --- 
+2018-04-23 15:39:24,972 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 15:39:58,736 - INFO - msa.py - psicov - Time of Execution --- 33.7641279697 seconds --- 
+2018-04-23 15:39:58,880 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 20.0 run 20000 
+2018-04-23 15:48:31,089 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 15:49:30,667 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 59.5778632164 seconds --- 
+2018-04-23 15:49:30,667 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 15:50:30,372 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.705302 seconds --- 
+2018-04-23 15:50:30,389 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 15:51:17,992 - INFO - msa.py - psicov - Time of Execution --- 47.6031520367 seconds --- 
+2018-04-23 15:51:18,247 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-23 16:07:03,404 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 16:09:08,998 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 125.594212055 seconds --- 
+2018-04-23 16:09:08,998 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 16:11:11,287 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 122.288161993 seconds --- 
+2018-04-23 16:11:11,311 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 16:12:34,620 - INFO - msa.py - psicov - Time of Execution --- 83.3089120388 seconds --- 
+2018-04-23 16:12:34,835 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-23 16:44:38,842 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 16:49:18,848 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 280.006088972 seconds --- 
+2018-04-23 16:49:18,848 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 16:54:01,058 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 282.209938049 seconds --- 
+2018-04-23 16:54:01,095 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 16:57:01,665 - INFO - msa.py - psicov - Time of Execution --- 180.569629908 seconds --- 
+2018-04-23 16:57:01,885 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-23 17:58:21,861 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 18:06:50,179 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 508.317414999 seconds --- 
+2018-04-23 18:06:50,179 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 18:15:21,018 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 510.838560104 seconds --- 
+2018-04-23 18:15:21,068 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 18:21:05,236 - INFO - msa.py - psicov - Time of Execution --- 344.168586016 seconds --- 
+2018-04-23 18:21:05,434 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-23 19:22:03,534 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 19:28:28,380 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 384.84630394 seconds --- 
+2018-04-23 19:28:28,380 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 19:34:53,754 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 385.374037027 seconds --- 
+2018-04-23 19:34:53,798 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 19:39:02,874 - INFO - msa.py - psicov - Time of Execution --- 249.076362848 seconds --- 
+2018-04-23 19:39:03,054 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-23 20:39:34,611 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 20:42:06,958 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 152.347511053 seconds --- 
+2018-04-23 20:42:06,958 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 20:44:39,868 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 152.909317017 seconds --- 
+2018-04-23 20:44:39,895 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 20:46:17,927 - INFO - msa.py - psicov - Time of Execution --- 98.0313358307 seconds --- 
+2018-04-23 20:46:18,141 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-23 21:57:33,468 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 21:58:38,028 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 64.5605871677 seconds --- 
+2018-04-23 21:58:38,029 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 21:59:42,904 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 64.8752169609 seconds --- 
+2018-04-23 21:59:42,922 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 22:00:23,064 - INFO - msa.py - psicov - Time of Execution --- 40.1419909 seconds --- 
+2018-04-23 22:00:23,221 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-23 22:43:14,516 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 22:43:31,658 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 17.1422410011 seconds --- 
+2018-04-23 22:43:31,659 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 22:43:49,238 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 17.5791859627 seconds --- 
+2018-04-23 22:43:49,247 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 22:44:03,406 - INFO - msa.py - psicov - Time of Execution --- 14.159047842 seconds --- 
+2018-04-23 22:44:03,595 - INFO - evol.py - optimize_evolution - Calculation of beta 15.0 nsus 20.0 run 20000 
+2018-04-23 22:47:20,666 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 22:47:24,453 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.78720593452 seconds --- 
+2018-04-23 22:47:24,454 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 22:47:28,620 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.16596198082 seconds --- 
+2018-04-23 22:47:28,621 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 22:47:37,252 - INFO - msa.py - psicov - Time of Execution --- 8.63117599487 seconds --- 
+2018-04-23 22:47:37,458 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA_M17 
+2018-04-23 22:47:37,468 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-23 22:54:24,405 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 22:55:08,389 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 43.9833478928 seconds --- 
+2018-04-23 22:55:08,389 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 22:55:52,912 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 44.5232288837 seconds --- 
+2018-04-23 22:55:52,927 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 22:56:30,223 - INFO - msa.py - psicov - Time of Execution --- 37.2958359718 seconds --- 
+2018-04-23 22:56:30,443 - INFO - evol.py - optimize_evolution - Calculation of beta 0.01 nsus 20.0 run 20000 
+2018-04-23 23:03:29,064 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 23:04:14,750 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 45.6854529381 seconds --- 
+2018-04-23 23:04:14,750 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 23:05:01,113 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 46.3629689217 seconds --- 
+2018-04-23 23:05:01,128 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 23:05:37,165 - INFO - msa.py - psicov - Time of Execution --- 36.0367929935 seconds --- 
+2018-04-23 23:05:37,390 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 20.0 run 20000 
+2018-04-23 23:14:12,076 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 23:15:11,444 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 59.3682971001 seconds --- 
+2018-04-23 23:15:11,444 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 23:16:11,263 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.818969965 seconds --- 
+2018-04-23 23:16:11,280 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 23:16:57,353 - INFO - msa.py - psicov - Time of Execution --- 46.0721440315 seconds --- 
+2018-04-23 23:16:57,522 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-23 23:34:05,039 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-23 23:36:18,904 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 133.865807056 seconds --- 
+2018-04-23 23:36:18,905 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-23 23:38:33,467 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 134.562315941 seconds --- 
+2018-04-23 23:38:33,493 - INFO - msa.py - psicov - Begin of the method 
+2018-04-23 23:40:06,691 - INFO - msa.py - psicov - Time of Execution --- 93.1986420155 seconds --- 
+2018-04-23 23:40:06,957 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-24 00:18:13,827 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 00:23:52,238 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 338.410743952 seconds --- 
+2018-04-24 00:23:52,238 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 00:29:29,860 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 337.622253895 seconds --- 
+2018-04-24 00:29:29,904 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 00:33:18,500 - INFO - msa.py - psicov - Time of Execution --- 228.596204996 seconds --- 
+2018-04-24 00:33:18,670 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-24 01:43:55,200 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 01:53:14,352 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 559.151703119 seconds --- 
+2018-04-24 01:53:14,352 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 02:02:36,514 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 562.162103176 seconds --- 
+2018-04-24 02:02:36,567 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 02:08:39,432 - INFO - msa.py - psicov - Time of Execution --- 362.865727901 seconds --- 
+2018-04-24 02:08:39,684 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-24 03:21:41,502 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 03:28:12,264 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 390.762084007 seconds --- 
+2018-04-24 03:28:12,264 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 03:34:43,330 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 391.065478086 seconds --- 
+2018-04-24 03:34:43,375 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 03:38:57,459 - INFO - msa.py - psicov - Time of Execution --- 254.08427906 seconds --- 
+2018-04-24 03:38:57,720 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-24 05:24:49,795 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 05:27:24,474 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 154.678276062 seconds --- 
+2018-04-24 05:27:24,474 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 05:29:59,357 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 154.883358002 seconds --- 
+2018-04-24 05:29:59,385 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 05:31:35,776 - INFO - msa.py - psicov - Time of Execution --- 96.3911719322 seconds --- 
+2018-04-24 05:31:36,183 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-24 08:12:01,352 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 08:13:07,934 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 66.5817480087 seconds --- 
+2018-04-24 08:13:07,934 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 08:14:15,847 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 67.9129362106 seconds --- 
+2018-04-24 08:14:15,866 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 08:15:02,176 - INFO - msa.py - psicov - Time of Execution --- 46.3100030422 seconds --- 
+2018-04-24 08:15:02,324 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-24 09:38:41,091 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 09:38:55,612 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 14.5208501816 seconds --- 
+2018-04-24 09:38:55,612 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 09:39:10,612 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 14.9999251366 seconds --- 
+2018-04-24 09:39:10,620 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 09:39:24,577 - INFO - msa.py - psicov - Time of Execution --- 13.9569659233 seconds --- 
+2018-04-24 09:39:24,723 - INFO - evol.py - optimize_evolution - Calculation of beta 15.0 nsus 20.0 run 20000 
+2018-04-24 09:44:56,690 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 09:45:00,409 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.71920895576 seconds --- 
+2018-04-24 09:45:00,409 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 09:45:04,582 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.17282509804 seconds --- 
+2018-04-24 09:45:04,584 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 09:45:14,223 - INFO - msa.py - psicov - Time of Execution --- 9.6391210556 seconds --- 
+2018-04-24 09:45:14,451 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-24 09:45:14,452 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-24 09:48:03,444 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA 
+2018-04-24 09:48:03,445 - INFO - evol.py - optimize_evolution - Calculation of beta 0.001 nsus 20.0 run 20000 
+2018-04-24 09:51:11,957 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA 
+2018-04-24 09:51:11,958 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-24 10:06:53,562 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 10:08:56,742 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 123.179302931 seconds --- 
+2018-04-24 10:08:56,742 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 10:10:58,676 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 121.934531212 seconds --- 
+2018-04-24 10:10:58,702 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 10:12:27,281 - INFO - msa.py - psicov - Time of Execution --- 88.5785839558 seconds --- 
+2018-04-24 10:12:27,541 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-24 10:46:19,366 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 10:51:12,409 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 293.043373108 seconds --- 
+2018-04-24 10:51:12,409 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 10:56:08,745 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 296.336146832 seconds --- 
+2018-04-24 10:56:08,785 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 10:59:26,329 - INFO - msa.py - psicov - Time of Execution --- 197.544497013 seconds --- 
+2018-04-24 10:59:26,517 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-24 12:05:31,574 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 12:14:24,717 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 533.142847061 seconds --- 
+2018-04-24 12:14:24,717 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 12:23:18,838 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 534.121310949 seconds --- 
+2018-04-24 12:23:18,891 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 12:29:04,608 - INFO - msa.py - psicov - Time of Execution --- 345.717432976 seconds --- 
+2018-04-24 12:29:04,881 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-24 13:34:33,926 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 13:40:43,263 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 369.336843014 seconds --- 
+2018-04-24 13:40:43,263 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 13:46:53,113 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 369.849725962 seconds --- 
+2018-04-24 13:46:53,156 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 13:50:54,400 - INFO - msa.py - psicov - Time of Execution --- 241.244313955 seconds --- 
+2018-04-24 13:50:54,629 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-24 15:12:56,520 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 15:15:20,133 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 143.613368034 seconds --- 
+2018-04-24 15:15:20,133 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 15:17:42,578 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 142.444854975 seconds --- 
+2018-04-24 15:17:42,605 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 15:19:12,965 - INFO - msa.py - psicov - Time of Execution --- 90.3596861362 seconds --- 
+2018-04-24 15:19:13,124 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-24 17:07:49,336 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 17:08:43,668 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 54.3314828873 seconds --- 
+2018-04-24 17:08:43,668 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 17:09:38,642 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 54.9744739532 seconds --- 
+2018-04-24 17:09:38,659 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 17:10:16,833 - INFO - msa.py - psicov - Time of Execution --- 38.1737680435 seconds --- 
+2018-04-24 17:10:17,028 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-24 17:57:25,601 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 17:57:37,099 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 11.4978141785 seconds --- 
+2018-04-24 17:57:37,099 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 17:57:48,950 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 11.8499588966 seconds --- 
+2018-04-24 17:57:48,956 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 17:57:59,136 - INFO - msa.py - psicov - Time of Execution --- 10.179625988 seconds --- 
+2018-04-24 17:57:59,339 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB 
+2018-04-24 17:57:59,340 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-24 18:11:49,857 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 18:13:35,444 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 105.58675313 seconds --- 
+2018-04-24 18:13:35,444 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 18:15:21,292 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 105.847131014 seconds --- 
+2018-04-24 18:15:21,315 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 18:16:36,048 - INFO - msa.py - psicov - Time of Execution --- 74.7333681583 seconds --- 
+2018-04-24 18:16:36,321 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-24 18:43:47,075 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 18:47:41,693 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 234.618368149 seconds --- 
+2018-04-24 18:47:41,693 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 18:51:36,536 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 234.842519045 seconds --- 
+2018-04-24 18:51:36,571 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 18:54:17,954 - INFO - msa.py - psicov - Time of Execution --- 161.383718014 seconds --- 
+2018-04-24 18:54:18,224 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-24 19:54:56,114 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 20:03:49,981 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 533.866981983 seconds --- 
+2018-04-24 20:03:49,981 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 20:12:43,162 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 533.180332899 seconds --- 
+2018-04-24 20:12:43,214 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 20:18:30,237 - INFO - msa.py - psicov - Time of Execution --- 347.022866964 seconds --- 
+2018-04-24 20:18:30,422 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-24 21:21:35,042 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 21:29:05,586 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 450.54411602 seconds --- 
+2018-04-24 21:29:05,587 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 21:36:37,110 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 451.523744106 seconds --- 
+2018-04-24 21:36:37,158 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 21:41:23,458 - INFO - msa.py - psicov - Time of Execution --- 286.299417019 seconds --- 
+2018-04-24 21:41:23,887 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-24 22:45:12,565 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-24 22:48:23,747 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 191.181938887 seconds --- 
+2018-04-24 22:48:23,747 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-24 22:51:35,629 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 191.881433964 seconds --- 
+2018-04-24 22:51:35,660 - INFO - msa.py - psicov - Begin of the method 
+2018-04-24 22:53:33,651 - INFO - msa.py - psicov - Time of Execution --- 117.990962029 seconds --- 
+2018-04-24 22:53:34,075 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-25 00:27:36,396 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 00:29:03,904 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 87.5082259178 seconds --- 
+2018-04-25 00:29:03,904 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 00:30:28,911 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 85.0062870979 seconds --- 
+2018-04-25 00:30:28,931 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 00:31:20,490 - INFO - msa.py - psicov - Time of Execution --- 51.5592710972 seconds --- 
+2018-04-25 00:31:20,671 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-25 01:47:53,362 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 01:48:15,854 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 22.4925611019 seconds --- 
+2018-04-25 01:48:15,855 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 01:48:38,712 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 22.85759902 seconds --- 
+2018-04-25 01:48:38,722 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 01:48:55,134 - INFO - msa.py - psicov - Time of Execution --- 16.4109458923 seconds --- 
+2018-04-25 01:48:55,343 - INFO - evol.py - optimize_evolution - Run Optimization For 2H74 
+2018-04-25 01:48:55,344 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-25 02:06:03,728 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 02:08:16,305 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 132.576927185 seconds --- 
+2018-04-25 02:08:16,305 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 02:10:30,799 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 134.493699074 seconds --- 
+2018-04-25 02:10:30,825 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 02:12:09,585 - INFO - msa.py - psicov - Time of Execution --- 98.7597310543 seconds --- 
+2018-04-25 02:12:09,845 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 20.0 run 20000 
+2018-04-25 02:50:51,340 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 02:56:53,034 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 361.694267988 seconds --- 
+2018-04-25 02:56:53,034 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 03:02:53,911 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 360.876854181 seconds --- 
+2018-04-25 03:02:53,954 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 03:06:52,018 - INFO - msa.py - psicov - Time of Execution --- 238.06457305 seconds --- 
+2018-04-25 03:06:52,224 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 20.0 run 20000 
+2018-04-25 04:17:34,813 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 04:28:05,042 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 630.228952885 seconds --- 
+2018-04-25 04:28:05,042 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 04:38:02,309 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 597.266772032 seconds --- 
+2018-04-25 04:38:02,363 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 04:44:18,636 - INFO - msa.py - psicov - Time of Execution --- 376.273153067 seconds --- 
+2018-04-25 04:44:18,880 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-25 05:50:53,880 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 05:57:39,089 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 405.208403111 seconds --- 
+2018-04-25 05:57:39,089 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 06:04:23,873 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 404.783810139 seconds --- 
+2018-04-25 06:04:23,918 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 06:08:33,324 - INFO - msa.py - psicov - Time of Execution --- 249.406166077 seconds --- 
+2018-04-25 06:08:33,598 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-25 07:33:56,049 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 07:36:56,987 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 180.937599897 seconds --- 
+2018-04-25 07:36:56,987 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 07:39:58,335 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 181.347722054 seconds --- 
+2018-04-25 07:39:58,369 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 07:41:54,812 - INFO - msa.py - psicov - Time of Execution --- 116.443030119 seconds --- 
+2018-04-25 07:41:55,107 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-25 09:40:45,762 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 09:42:11,085 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 85.3233370781 seconds --- 
+2018-04-25 09:42:11,085 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 09:43:36,875 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 85.7901639938 seconds --- 
+2018-04-25 09:43:36,896 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 09:44:32,387 - INFO - msa.py - psicov - Time of Execution --- 55.4909749031 seconds --- 
+2018-04-25 09:44:32,598 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-25 11:20:43,955 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 11:21:09,430 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 25.4754202366 seconds --- 
+2018-04-25 11:21:09,431 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 11:21:35,249 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 25.8182659149 seconds --- 
+2018-04-25 11:21:35,260 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 11:21:54,998 - INFO - msa.py - psicov - Time of Execution --- 19.7384889126 seconds --- 
+2018-04-25 11:21:55,198 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M5 
+2018-04-25 11:21:55,199 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 20.0 run 20000 
+2018-04-25 11:59:30,698 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 11:59:30,811 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:01:35,431 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 12:01:57,929 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:02:47,576 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 12:02:52,739 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:06:16,183 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 12:08:53,741 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 12:08:59,465 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:12:14,837 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-25 12:12:14,974 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:12:15,087 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:12:44,151 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage11" as iconphoto: not a photo image 
+2018-04-25 12:13:02,708 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage21" as iconphoto: not a photo image 
+2018-04-25 12:13:07,505 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage31" as iconphoto: not a photo image 
+2018-04-25 12:13:13,088 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage41" as iconphoto: not a photo image 
+2018-04-25 12:13:13,337 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage50" as iconphoto: not a photo image 
+2018-04-25 12:14:14,479 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-25 12:16:40,028 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M5 
+2018-04-25 12:16:55,836 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-25 13:15:39,305 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 13:21:51,776 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 372.47161603 seconds --- 
+2018-04-25 13:21:51,777 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 13:28:05,281 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 373.504658937 seconds --- 
+2018-04-25 13:28:05,342 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 13:32:03,573 - INFO - msa.py - psicov - Time of Execution --- 238.230394125 seconds --- 
+2018-04-25 13:32:04,028 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-25 14:32:47,690 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 14:35:12,045 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 144.354716063 seconds --- 
+2018-04-25 14:35:12,045 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 14:37:36,685 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 144.639569998 seconds --- 
+2018-04-25 14:37:36,722 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 14:39:09,791 - INFO - msa.py - psicov - Time of Execution --- 93.0685319901 seconds --- 
+2018-04-25 14:39:10,137 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-25 15:48:39,309 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 15:49:39,411 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 60.1019928455 seconds --- 
+2018-04-25 15:49:39,411 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 15:50:39,811 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.3993320465 seconds --- 
+2018-04-25 15:50:39,834 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 15:51:17,660 - INFO - msa.py - psicov - Time of Execution --- 37.8259990215 seconds --- 
+2018-04-25 15:51:17,992 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-25 16:28:38,337 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-25 16:28:54,040 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 15.7027568817 seconds --- 
+2018-04-25 16:28:54,040 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 16:29:10,148 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 16.1072518826 seconds --- 
+2018-04-25 16:29:10,159 - INFO - msa.py - psicov - Begin of the method 
+2018-04-25 16:29:23,116 - INFO - msa.py - psicov - Time of Execution --- 12.9574019909 seconds --- 
+2018-04-25 16:29:45,257 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M7 
+2018-04-25 16:29:56,674 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-25 16:57:34,512 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-25 16:57:34,520 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 1.0 run 1000 
+2018-04-25 16:58:36,504 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-25 16:58:36,519 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 1.0 run 1000 
+2018-04-25 16:58:49,033 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 16:58:53,339 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.3061478138 seconds --- 
+2018-04-25 17:02:14,119 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-25 17:02:14,120 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-25 17:03:19,291 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:04:17,376 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.0853841305 seconds --- 
+2018-04-25 17:04:17,457 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-25 17:05:27,714 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:06:28,428 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.7146279812 seconds --- 
+2018-04-25 17:06:28,513 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-25 17:07:44,233 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:08:44,104 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.8715670109 seconds --- 
+2018-04-25 17:08:44,228 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-25 17:10:16,132 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:11:17,596 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.4636030197 seconds --- 
+2018-04-25 17:11:17,709 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-25 17:12:57,491 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:14:14,802 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 77.3113019466 seconds --- 
+2018-04-25 17:14:14,901 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-25 17:15:59,362 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:17:17,983 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 78.6205821037 seconds --- 
+2018-04-25 17:17:18,020 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-25 17:19:28,437 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:20:08,458 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 40.0209867954 seconds --- 
+2018-04-25 17:20:08,566 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-25 17:22:37,671 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:24:13,158 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 95.4863259792 seconds --- 
+2018-04-25 17:24:13,257 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-25 17:26:51,786 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:28:45,366 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 113.580343962 seconds --- 
+2018-04-25 17:28:45,460 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-25 17:31:35,004 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:32:07,579 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.5748500824 seconds --- 
+2018-04-25 17:32:07,702 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-25 17:35:25,864 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:36:54,419 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 88.5557229519 seconds --- 
+2018-04-25 17:36:54,524 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-25 17:40:30,569 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:42:47,429 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 136.859810114 seconds --- 
+2018-04-25 17:42:47,519 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-25 17:46:21,362 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:46:49,659 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 28.2971627712 seconds --- 
+2018-04-25 17:46:49,803 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-25 17:50:54,573 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:52:06,568 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 71.9952440262 seconds --- 
+2018-04-25 17:52:06,659 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-25 17:56:44,442 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 17:59:01,756 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 137.314156055 seconds --- 
+2018-04-25 17:59:01,831 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-25 18:05:37,843 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 18:05:49,521 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 11.6782529354 seconds --- 
+2018-04-25 18:05:49,638 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-25 18:13:59,992 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 18:14:34,077 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 34.0855858326 seconds --- 
+2018-04-25 18:14:34,222 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-25 18:23:31,617 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-25 18:24:45,649 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 74.0320901871 seconds --- 
+2018-04-26 09:29:08,591 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-26 09:29:31,953 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M16 
+2018-04-26 09:29:44,168 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 1000 
+2018-04-26 10:11:04,184 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:11:08,818 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.63369488716 seconds --- 
+2018-04-26 10:14:06,417 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA_M17 
+2018-04-26 10:14:06,429 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 1000 
+2018-04-26 10:14:12,535 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:14:16,958 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.4236330986 seconds --- 
+2018-04-26 10:15:08,601 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA_M17 
+2018-04-26 10:15:09,803 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 1000 
+2018-04-26 10:15:15,218 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:15:19,593 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.37514805794 seconds --- 
+2018-04-26 10:15:30,931 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 1000 
+2018-04-26 10:15:44,047 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:15:48,199 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.15217208862 seconds --- 
+2018-04-26 10:16:12,230 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA_M17 
+2018-04-26 10:16:12,231 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 10:17:18,099 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:18:18,787 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.6882200241 seconds --- 
+2018-04-26 10:18:18,889 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 10:19:31,747 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:20:32,664 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.91705513 seconds --- 
+2018-04-26 10:20:32,759 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 10:21:50,018 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:22:51,253 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.2351400852 seconds --- 
+2018-04-26 10:22:51,413 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 10:24:29,876 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:25:31,103 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.2267899513 seconds --- 
+2018-04-26 10:25:31,194 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 10:27:18,928 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:28:39,862 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 80.9343700409 seconds --- 
+2018-04-26 10:28:39,963 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 10:30:33,094 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:31:54,025 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 80.9311721325 seconds --- 
+2018-04-26 10:31:54,107 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 10:34:21,931 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:35:02,008 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 40.0766708851 seconds --- 
+2018-04-26 10:35:02,129 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 10:37:55,468 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:39:33,577 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 98.1094708443 seconds --- 
+2018-04-26 10:39:33,666 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 10:42:35,104 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:44:37,966 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 122.861939907 seconds --- 
+2018-04-26 10:44:38,106 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 10:47:54,066 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:48:26,267 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.2005550861 seconds --- 
+2018-04-26 10:48:26,388 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 10:52:19,100 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 10:53:47,078 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 87.9784171581 seconds --- 
+2018-04-26 10:53:47,207 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 10:58:01,583 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:00:27,001 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 145.417917013 seconds --- 
+2018-04-26 11:00:27,097 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 11:04:43,846 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:05:11,786 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 27.9401180744 seconds --- 
+2018-04-26 11:05:11,882 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 11:10:04,551 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:11:16,259 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 71.7081589699 seconds --- 
+2018-04-26 11:11:16,365 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 11:16:39,464 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:18:57,836 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 138.371488094 seconds --- 
+2018-04-26 11:18:57,989 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 11:27:50,770 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:28:02,773 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 12.0027389526 seconds --- 
+2018-04-26 11:28:02,865 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 11:39:28,619 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:40:02,854 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 34.2349851131 seconds --- 
+2018-04-26 11:40:02,976 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 11:52:15,744 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:53:27,942 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 72.1982679367 seconds --- 
+2018-04-26 11:53:28,051 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-26 11:53:28,054 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 11:54:29,054 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:55:25,443 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 56.3890190125 seconds --- 
+2018-04-26 11:55:25,556 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 11:56:32,109 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:57:30,441 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.3316931725 seconds --- 
+2018-04-26 11:57:30,541 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 11:58:43,344 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 11:59:41,550 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.206799984 seconds --- 
+2018-04-26 11:59:41,657 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 12:01:04,823 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:02:05,913 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.0901091099 seconds --- 
+2018-04-26 12:02:06,083 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 12:03:36,551 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:04:51,613 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 75.0626008511 seconds --- 
+2018-04-26 12:04:51,664 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 12:06:30,302 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:07:46,158 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 75.8555819988 seconds --- 
+2018-04-26 12:07:46,260 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 12:09:44,010 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:10:31,461 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 47.4508509636 seconds --- 
+2018-04-26 12:10:31,546 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 12:12:47,709 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:14:26,602 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 98.8933320045 seconds --- 
+2018-04-26 12:14:26,715 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 12:16:51,033 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:18:43,649 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 112.615541935 seconds --- 
+2018-04-26 12:18:43,740 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 12:21:12,772 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:21:47,538 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 34.7651588917 seconds --- 
+2018-04-26 12:21:47,630 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 12:24:46,913 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:26:30,771 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 103.85751915 seconds --- 
+2018-04-26 12:26:30,867 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 12:29:46,579 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:32:12,457 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 145.878398895 seconds --- 
+2018-04-26 12:32:12,555 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 12:35:14,336 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:35:46,820 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.4835669994 seconds --- 
+2018-04-26 12:35:46,917 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 12:39:20,044 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:40:51,022 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 90.9780158997 seconds --- 
+2018-04-26 12:40:51,119 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 12:44:53,751 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:47:28,775 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 155.024796963 seconds --- 
+2018-04-26 12:47:28,875 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 12:52:53,743 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 12:53:09,788 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 16.0449559689 seconds --- 
+2018-04-26 12:53:09,868 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 12:59:26,286 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:00:18,459 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 52.172082901 seconds --- 
+2018-04-26 13:00:18,539 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 13:07:17,040 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:09:03,285 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 106.244710922 seconds --- 
+2018-04-26 13:09:03,419 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOA 
+2018-04-26 13:09:03,420 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 13:10:06,259 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:11:04,580 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.3216769695 seconds --- 
+2018-04-26 13:11:04,657 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 13:12:13,342 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:13:12,580 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.2374908924 seconds --- 
+2018-04-26 13:13:12,662 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 13:14:27,071 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:15:26,251 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.180670023 seconds --- 
+2018-04-26 13:15:26,346 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 13:16:55,326 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:17:55,385 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.0589230061 seconds --- 
+2018-04-26 13:17:55,487 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 13:19:35,156 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:20:52,384 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 77.2278017998 seconds --- 
+2018-04-26 13:20:52,509 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 13:22:36,793 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:23:54,174 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 77.3814020157 seconds --- 
+2018-04-26 13:23:54,276 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 13:26:03,973 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:26:43,377 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 39.4042239189 seconds --- 
+2018-04-26 13:26:43,524 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 13:29:15,120 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:30:51,737 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 96.6170639992 seconds --- 
+2018-04-26 13:30:51,953 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 13:33:33,645 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:35:28,108 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 114.462980986 seconds --- 
+2018-04-26 13:35:28,209 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 13:38:21,077 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:38:53,249 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.1728699207 seconds --- 
+2018-04-26 13:38:53,336 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 13:42:12,630 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:43:39,080 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 86.4501619339 seconds --- 
+2018-04-26 13:43:39,249 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 13:47:16,808 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:49:35,273 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 138.465543032 seconds --- 
+2018-04-26 13:49:35,305 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 13:53:13,081 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:53:40,485 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 27.4041368961 seconds --- 
+2018-04-26 13:53:40,636 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 13:57:55,870 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 13:59:06,961 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 71.0913732052 seconds --- 
+2018-04-26 13:59:07,037 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 14:03:52,290 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:06:06,452 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 134.161799908 seconds --- 
+2018-04-26 14:06:06,472 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 14:13:40,381 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:13:51,773 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 11.3913359642 seconds --- 
+2018-04-26 14:13:51,864 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 14:23:48,296 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:24:21,833 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 33.5372941494 seconds --- 
+2018-04-26 14:24:21,923 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 14:34:57,322 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:36:07,679 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 70.3575069904 seconds --- 
+2018-04-26 14:36:07,759 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB 
+2018-04-26 14:36:07,760 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 14:37:09,189 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:38:06,903 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 57.7139999866 seconds --- 
+2018-04-26 14:38:07,015 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 14:39:15,269 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:40:13,610 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.3412539959 seconds --- 
+2018-04-26 14:40:13,720 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 14:41:27,032 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:42:25,781 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.7490570545 seconds --- 
+2018-04-26 14:42:25,877 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 14:43:48,477 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:44:49,990 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.5128509998 seconds --- 
+2018-04-26 14:44:50,090 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 14:46:19,645 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:47:32,649 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 73.0038290024 seconds --- 
+2018-04-26 14:47:32,705 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 14:49:09,081 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:50:24,149 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 75.0683970451 seconds --- 
+2018-04-26 14:50:24,220 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 14:52:16,232 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:53:01,186 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 44.9544141293 seconds --- 
+2018-04-26 14:53:01,287 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 14:55:09,380 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 14:56:41,413 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 92.0330619812 seconds --- 
+2018-04-26 14:56:41,503 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 14:58:56,664 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:00:39,235 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 102.570874929 seconds --- 
+2018-04-26 15:00:39,329 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 15:03:02,169 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:03:36,394 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 34.2251369953 seconds --- 
+2018-04-26 15:03:36,450 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 15:06:23,433 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:07:59,815 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 96.3824257851 seconds --- 
+2018-04-26 15:07:59,912 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 15:11:00,768 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:13:12,906 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 132.138669014 seconds --- 
+2018-04-26 15:13:13,009 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 15:16:12,612 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:16:43,655 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 31.0424377918 seconds --- 
+2018-04-26 15:16:43,706 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 15:20:11,034 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:21:31,926 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 80.8918368816 seconds --- 
+2018-04-26 15:21:32,038 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 15:25:24,470 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:27:48,552 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 144.081655979 seconds --- 
+2018-04-26 15:27:48,660 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 15:33:25,726 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:33:38,603 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 12.8762681484 seconds --- 
+2018-04-26 15:33:38,703 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 15:40:42,935 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:41:22,455 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 39.5197658539 seconds --- 
+2018-04-26 15:41:22,540 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 15:49:02,453 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:50:27,039 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 84.5859260559 seconds --- 
+2018-04-26 15:50:27,132 - INFO - evol.py - optimize_evolution - Run Optimization For 2H74 
+2018-04-26 15:50:27,133 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 15:51:29,817 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:52:28,595 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.7784531116 seconds --- 
+2018-04-26 15:52:28,682 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 15:53:36,131 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:54:36,774 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.6431150436 seconds --- 
+2018-04-26 15:54:37,002 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 15:55:50,698 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:56:51,504 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.8061258793 seconds --- 
+2018-04-26 15:56:51,602 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 15:58:19,354 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 15:59:21,228 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.8739759922 seconds --- 
+2018-04-26 15:59:21,315 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 16:00:59,389 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:02:17,607 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 78.2179849148 seconds --- 
+2018-04-26 16:02:17,737 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 16:04:00,280 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:05:19,773 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 79.4929411411 seconds --- 
+2018-04-26 16:05:19,881 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 16:07:34,990 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:08:13,224 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 38.2334928513 seconds --- 
+2018-04-26 16:08:13,345 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 16:10:54,237 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:12:34,379 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 100.142049074 seconds --- 
+2018-04-26 16:12:34,477 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 16:15:22,891 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:17:26,993 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 124.10234499 seconds --- 
+2018-04-26 16:17:27,071 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 16:20:46,556 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:21:19,889 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 33.3335621357 seconds --- 
+2018-04-26 16:21:19,979 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 16:25:06,814 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:26:35,670 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 88.8555178642 seconds --- 
+2018-04-26 16:26:35,758 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 16:30:46,515 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:33:15,046 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 148.530977964 seconds --- 
+2018-04-26 16:33:15,122 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 16:37:36,852 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:38:05,011 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 28.1587409973 seconds --- 
+2018-04-26 16:38:05,123 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 16:43:07,382 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:44:19,721 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 72.3385100365 seconds --- 
+2018-04-26 16:44:19,798 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 16:49:50,176 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 16:52:10,707 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 140.531653881 seconds --- 
+2018-04-26 16:52:10,783 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 17:01:01,192 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:01:13,145 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 11.9524908066 seconds --- 
+2018-04-26 17:01:13,238 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 17:12:43,443 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:13:18,579 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 35.1359438896 seconds --- 
+2018-04-26 17:13:18,675 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 17:25:28,993 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:26:42,247 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 73.2539491653 seconds --- 
+2018-04-26 17:26:42,341 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M5 
+2018-04-26 17:26:42,342 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 17:27:46,627 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:28:43,671 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 57.0441398621 seconds --- 
+2018-04-26 17:28:43,786 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 17:29:53,213 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:30:52,110 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.896520853 seconds --- 
+2018-04-26 17:30:52,199 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 17:32:07,652 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:33:06,795 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.1425521374 seconds --- 
+2018-04-26 17:33:07,013 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 17:34:41,659 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:35:42,092 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.4333539009 seconds --- 
+2018-04-26 17:35:42,185 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 17:37:25,937 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:38:43,228 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 77.2916810513 seconds --- 
+2018-04-26 17:38:43,369 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 17:40:32,147 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:41:50,252 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 78.1054131985 seconds --- 
+2018-04-26 17:41:50,330 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 17:44:16,484 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:44:54,780 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 38.295732975 seconds --- 
+2018-04-26 17:44:54,823 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 17:47:44,355 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:49:21,423 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 97.0679559708 seconds --- 
+2018-04-26 17:49:21,544 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 17:52:20,128 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:54:17,191 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 117.06327796 seconds --- 
+2018-04-26 17:54:17,320 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 17:57:30,279 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 17:58:02,432 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.153179884 seconds --- 
+2018-04-26 17:58:02,511 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 18:01:43,689 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:03:10,809 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 87.1201341152 seconds --- 
+2018-04-26 18:03:10,889 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 18:07:11,071 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:09:30,862 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 139.790296078 seconds --- 
+2018-04-26 18:09:30,946 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 18:13:29,451 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:13:56,384 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 26.9333930016 seconds --- 
+2018-04-26 18:13:56,475 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 18:18:31,724 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:19:43,077 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 71.3533461094 seconds --- 
+2018-04-26 18:19:43,331 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 18:24:45,308 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:27:11,025 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 145.716753006 seconds --- 
+2018-04-26 18:27:11,131 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 18:34:10,864 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:34:23,609 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 12.7448890209 seconds --- 
+2018-04-26 18:34:23,687 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 18:43:04,969 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:43:38,586 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 33.6166908741 seconds --- 
+2018-04-26 18:43:38,685 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 18:53:06,478 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:54:16,117 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 69.6389129162 seconds --- 
+2018-04-26 18:54:16,230 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M7 
+2018-04-26 18:54:16,233 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 3.0 run 20000 
+2018-04-26 18:55:20,566 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:56:18,600 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 58.0347771645 seconds --- 
+2018-04-26 18:56:18,715 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 5.0 run 20000 
+2018-04-26 18:57:28,880 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 18:58:28,943 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 60.0631639957 seconds --- 
+2018-04-26 18:58:29,043 - INFO - evol.py - optimize_evolution - Calculation of beta 0.1 nsus 7.0 run 20000 
+2018-04-26 18:59:44,691 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:00:44,617 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 59.9260687828 seconds --- 
+2018-04-26 19:00:44,721 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 3.0 run 20000 
+2018-04-26 19:02:16,312 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:03:17,626 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 61.3142769337 seconds --- 
+2018-04-26 19:03:17,712 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 5.0 run 20000 
+2018-04-26 19:04:59,806 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:06:16,558 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 76.7520861626 seconds --- 
+2018-04-26 19:06:16,599 - INFO - evol.py - optimize_evolution - Calculation of beta 0.25 nsus 7.0 run 20000 
+2018-04-26 19:08:02,545 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:09:20,452 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 77.9073941708 seconds --- 
+2018-04-26 19:09:20,532 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 3.0 run 20000 
+2018-04-26 19:11:40,509 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:12:19,282 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 38.7728219032 seconds --- 
+2018-04-26 19:12:19,389 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 5.0 run 20000 
+2018-04-26 19:14:59,447 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:16:47,680 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 108.23229599 seconds --- 
+2018-04-26 19:16:47,767 - INFO - evol.py - optimize_evolution - Calculation of beta 0.5 nsus 7.0 run 20000 
+2018-04-26 19:19:48,579 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:21:54,107 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 125.527683973 seconds --- 
+2018-04-26 19:21:54,225 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 3.0 run 20000 
+2018-04-26 19:25:17,633 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:25:49,857 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.2242600918 seconds --- 
+2018-04-26 19:25:49,930 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 5.0 run 20000 
+2018-04-26 19:29:29,471 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:30:56,229 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 86.7577061653 seconds --- 
+2018-04-26 19:30:56,297 - INFO - evol.py - optimize_evolution - Calculation of beta 0.75 nsus 7.0 run 20000 
+2018-04-26 19:34:54,904 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:37:14,609 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 139.704822063 seconds --- 
+2018-04-26 19:37:14,689 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 3.0 run 20000 
+2018-04-26 19:41:17,493 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:41:45,230 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 27.7376639843 seconds --- 
+2018-04-26 19:41:45,320 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 5.0 run 20000 
+2018-04-26 19:46:25,506 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:47:36,448 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 70.9422450066 seconds --- 
+2018-04-26 19:47:36,548 - INFO - evol.py - optimize_evolution - Calculation of beta 1.0 nsus 7.0 run 20000 
+2018-04-26 19:52:41,152 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 19:54:53,817 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 132.665210009 seconds --- 
+2018-04-26 19:54:54,113 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 3.0 run 20000 
+2018-04-26 20:02:58,830 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 20:03:10,604 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 11.7735309601 seconds --- 
+2018-04-26 20:03:10,715 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 5.0 run 20000 
+2018-04-26 20:13:21,670 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 20:13:54,659 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 32.9883079529 seconds --- 
+2018-04-26 20:13:54,777 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 7.0 run 20000 
+2018-04-26 20:25:00,736 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-26 20:26:10,358 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 69.6216740608 seconds --- 
+2018-04-27 10:07:04,023 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M7 
+2018-04-27 10:07:19,157 - INFO - evol.py - optimize_evolution - Calculation of beta 2.0 nsus 1.0 run 1000 
+2018-04-27 10:07:45,386 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 10:07:49,073 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 3.68654990196 seconds --- 
+2018-04-27 10:07:49,790 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 10:07:53,900 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 4.11008191109 seconds --- 
+2018-04-27 10:07:55,002 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 10:07:55,038 - INFO - msa.py - psicov - Time of Execution --- 0.0363249778748 seconds --- 
+2018-04-27 10:10:43,537 - INFO - evol.py - optimize_evolution - Run Optimization For 1XOB_M7 
+2018-04-27 10:10:43,538 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-27 11:13:28,975 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 11:19:34,220 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 365.245434046 seconds --- 
+2018-04-27 11:19:34,220 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 11:25:43,545 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 369.324275017 seconds --- 
+2018-04-27 11:25:43,588 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 11:29:40,345 - INFO - msa.py - psicov - Time of Execution --- 236.757206202 seconds --- 
+2018-04-27 11:29:40,619 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-27 13:04:25,527 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 13:06:34,834 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 129.307247162 seconds --- 
+2018-04-27 13:06:34,834 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 13:08:44,887 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 130.052664995 seconds --- 
+2018-04-27 13:08:44,912 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 13:10:08,329 - INFO - msa.py - psicov - Time of Execution --- 83.416716814 seconds --- 
+2018-04-27 13:10:08,538 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-27 15:27:13,184 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 15:28:01,857 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 48.6736059189 seconds --- 
+2018-04-27 15:28:01,857 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 15:28:53,417 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 51.5598199368 seconds --- 
+2018-04-27 15:28:53,433 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 15:29:37,421 - INFO - msa.py - psicov - Time of Execution --- 43.9883170128 seconds --- 
+2018-04-27 15:29:37,741 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-27 16:17:49,080 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 16:17:58,429 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 9.34888696671 seconds --- 
+2018-04-27 16:17:58,429 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 16:18:08,097 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 9.66790294647 seconds --- 
+2018-04-27 16:18:08,103 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 16:18:18,250 - INFO - msa.py - psicov - Time of Execution --- 10.1470220089 seconds --- 
+2018-04-27 17:08:02,639 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-27 17:08:03,714 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:08:03,836 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:08:24,405 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage11" as iconphoto: not a photo image 
+2018-04-27 17:08:36,245 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage21" as iconphoto: not a photo image 
+2018-04-27 17:08:39,627 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage31" as iconphoto: not a photo image 
+2018-04-27 17:08:42,633 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage41" as iconphoto: not a photo image 
+2018-04-27 17:08:47,657 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage51" as iconphoto: not a photo image 
+2018-04-27 17:09:05,562 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:09:55,450 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage61" as iconphoto: not a photo image 
+2018-04-27 17:09:55,948 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage70" as iconphoto: not a photo image 
+2018-04-27 17:09:56,284 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage79" as iconphoto: not a photo image 
+2018-04-27 17:09:56,517 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage88" as iconphoto: not a photo image 
+2018-04-27 17:09:56,733 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage97" as iconphoto: not a photo image 
+2018-04-27 17:09:56,951 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage106" as iconphoto: not a photo image 
+2018-04-27 17:10:26,833 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage121" as iconphoto: not a photo image 
+2018-04-27 17:10:27,304 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage130" as iconphoto: not a photo image 
+2018-04-27 17:10:27,612 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage139" as iconphoto: not a photo image 
+2018-04-27 17:10:27,867 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage148" as iconphoto: not a photo image 
+2018-04-27 17:10:28,117 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage157" as iconphoto: not a photo image 
+2018-04-27 17:10:28,369 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage166" as iconphoto: not a photo image 
+2018-04-27 17:10:44,783 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage175" as iconphoto: not a photo image 
+2018-04-27 17:10:45,310 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage184" as iconphoto: not a photo image 
+2018-04-27 17:10:45,582 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage193" as iconphoto: not a photo image 
+2018-04-27 17:10:45,819 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage202" as iconphoto: not a photo image 
+2018-04-27 17:10:46,039 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage211" as iconphoto: not a photo image 
+2018-04-27 17:10:46,262 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage220" as iconphoto: not a photo image 
+2018-04-27 17:11:02,657 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage229" as iconphoto: not a photo image 
+2018-04-27 17:11:03,067 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage238" as iconphoto: not a photo image 
+2018-04-27 17:11:03,369 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage247" as iconphoto: not a photo image 
+2018-04-27 17:11:03,608 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage256" as iconphoto: not a photo image 
+2018-04-27 17:11:03,852 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage265" as iconphoto: not a photo image 
+2018-04-27 17:11:04,096 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage274" as iconphoto: not a photo image 
+2018-04-27 17:11:20,703 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage283" as iconphoto: not a photo image 
+2018-04-27 17:11:21,169 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage292" as iconphoto: not a photo image 
+2018-04-27 17:11:21,411 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage301" as iconphoto: not a photo image 
+2018-04-27 17:11:21,634 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage310" as iconphoto: not a photo image 
+2018-04-27 17:11:21,852 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage319" as iconphoto: not a photo image 
+2018-04-27 17:11:22,074 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage328" as iconphoto: not a photo image 
+2018-04-27 17:11:38,666 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage337" as iconphoto: not a photo image 
+2018-04-27 17:11:39,131 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage346" as iconphoto: not a photo image 
+2018-04-27 17:11:39,427 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage355" as iconphoto: not a photo image 
+2018-04-27 17:11:39,648 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage364" as iconphoto: not a photo image 
+2018-04-27 17:11:39,895 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage373" as iconphoto: not a photo image 
+2018-04-27 17:11:40,119 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage382" as iconphoto: not a photo image 
+2018-04-27 17:14:01,101 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:14:01,143 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:14:01,387 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-27 17:14:01,542 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-27 17:14:01,660 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-27 17:14:01,779 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-27 17:14:01,938 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-27 17:14:03,326 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-27 17:14:08,961 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-27 17:14:09,173 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-27 17:14:09,323 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-27 17:14:09,456 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-27 17:14:09,589 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-27 17:14:09,725 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-27 17:14:16,574 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-27 17:14:16,811 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage118" as iconphoto: not a photo image 
+2018-04-27 17:14:16,969 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage127" as iconphoto: not a photo image 
+2018-04-27 17:14:17,124 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage136" as iconphoto: not a photo image 
+2018-04-27 17:14:17,255 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage145" as iconphoto: not a photo image 
+2018-04-27 17:14:17,402 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage154" as iconphoto: not a photo image 
+2018-04-27 17:14:24,633 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage163" as iconphoto: not a photo image 
+2018-04-27 17:14:24,821 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage172" as iconphoto: not a photo image 
+2018-04-27 17:14:24,957 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage181" as iconphoto: not a photo image 
+2018-04-27 17:14:25,111 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage190" as iconphoto: not a photo image 
+2018-04-27 17:14:25,229 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage199" as iconphoto: not a photo image 
+2018-04-27 17:14:25,352 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage208" as iconphoto: not a photo image 
+2018-04-27 17:14:32,056 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage217" as iconphoto: not a photo image 
+2018-04-27 17:14:32,244 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage226" as iconphoto: not a photo image 
+2018-04-27 17:14:32,399 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage235" as iconphoto: not a photo image 
+2018-04-27 17:14:32,536 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage244" as iconphoto: not a photo image 
+2018-04-27 17:14:32,663 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage253" as iconphoto: not a photo image 
+2018-04-27 17:14:32,788 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage262" as iconphoto: not a photo image 
+2018-04-27 17:14:39,595 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage271" as iconphoto: not a photo image 
+2018-04-27 17:14:39,783 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage280" as iconphoto: not a photo image 
+2018-04-27 17:14:39,919 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage289" as iconphoto: not a photo image 
+2018-04-27 17:14:40,039 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage298" as iconphoto: not a photo image 
+2018-04-27 17:14:40,159 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage307" as iconphoto: not a photo image 
+2018-04-27 17:14:40,281 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage316" as iconphoto: not a photo image 
+2018-04-27 17:14:47,395 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage325" as iconphoto: not a photo image 
+2018-04-27 17:14:47,635 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage334" as iconphoto: not a photo image 
+2018-04-27 17:14:47,778 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage343" as iconphoto: not a photo image 
+2018-04-27 17:14:47,914 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage352" as iconphoto: not a photo image 
+2018-04-27 17:14:48,051 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage361" as iconphoto: not a photo image 
+2018-04-27 17:14:48,195 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage370" as iconphoto: not a photo image 
+2018-04-27 17:33:27,836 - INFO - evol.py - optimize_evolution - Run Optimization For 2TRX 
+2018-04-27 17:33:27,837 - INFO - evol.py - optimize_evolution - Calculation of beta 3.0 nsus 20.0 run 20000 
+2018-04-27 18:43:54,194 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 18:54:40,232 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 646.044000864 seconds --- 
+2018-04-27 18:54:40,232 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 19:04:34,283 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 594.05099082 seconds --- 
+2018-04-27 19:04:34,339 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 19:11:03,385 - INFO - msa.py - psicov - Time of Execution --- 389.045696974 seconds --- 
+2018-04-27 19:11:03,794 - INFO - evol.py - optimize_evolution - Calculation of beta 5.0 nsus 20.0 run 20000 
+2018-04-27 20:13:50,844 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 20:19:56,483 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 365.640800953 seconds --- 
+2018-04-27 20:19:56,483 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 20:25:16,273 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 319.790012121 seconds --- 
+2018-04-27 20:25:16,345 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 20:28:37,053 - INFO - msa.py - psicov - Time of Execution --- 200.708104134 seconds --- 
+2018-04-27 20:28:37,473 - INFO - evol.py - optimize_evolution - Calculation of beta 7.0 nsus 20.0 run 20000 
+2018-04-27 21:38:57,660 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 21:42:01,815 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 184.155773878 seconds --- 
+2018-04-27 21:42:01,815 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 21:45:05,701 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 183.885260105 seconds --- 
+2018-04-27 21:45:05,732 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 21:47:01,260 - INFO - msa.py - psicov - Time of Execution --- 115.528053999 seconds --- 
+2018-04-27 21:47:01,673 - INFO - evol.py - optimize_evolution - Calculation of beta 10.0 nsus 20.0 run 20000 
+2018-04-27 23:15:14,062 - INFO - msa.py - gaussDcaFrobenius - Begin of the method 
+2018-04-27 23:16:33,233 - INFO - msa.py - gaussDcaFrobenius - Time of Execution --- 79.1718878746 seconds --- 
+2018-04-27 23:16:33,234 - INFO - msa.py - gaussDcaDirectInformation - Begin of the method 
+2018-04-27 23:17:52,531 - INFO - msa.py - gaussDcaDirectInformation - Time of Execution --- 79.2969520092 seconds --- 
+2018-04-27 23:17:52,551 - INFO - msa.py - psicov - Begin of the method 
+2018-04-27 23:18:42,188 - INFO - msa.py - psicov - Time of Execution --- 49.6369400024 seconds --- 
+2018-04-30 10:19:45,173 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 10:19:45,217 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 10:19:45,448 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 10:19:45,663 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 10:19:45,802 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 10:19:45,966 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 10:19:46,097 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 10:19:47,307 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 10:19:54,006 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 10:19:54,920 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 10:19:55,102 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 10:19:55,220 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 10:19:55,358 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 10:19:55,478 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 10:20:01,958 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 10:20:02,219 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage118" as iconphoto: not a photo image 
+2018-04-30 10:20:02,353 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage127" as iconphoto: not a photo image 
+2018-04-30 10:20:02,473 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage136" as iconphoto: not a photo image 
+2018-04-30 10:20:02,591 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage145" as iconphoto: not a photo image 
+2018-04-30 10:20:02,713 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage154" as iconphoto: not a photo image 
+2018-04-30 10:20:09,350 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage163" as iconphoto: not a photo image 
+2018-04-30 10:20:09,537 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage172" as iconphoto: not a photo image 
+2018-04-30 10:20:09,672 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage181" as iconphoto: not a photo image 
+2018-04-30 10:20:09,832 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage190" as iconphoto: not a photo image 
+2018-04-30 10:20:09,953 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage199" as iconphoto: not a photo image 
+2018-04-30 10:20:10,074 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage208" as iconphoto: not a photo image 
+2018-04-30 10:20:16,554 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage217" as iconphoto: not a photo image 
+2018-04-30 10:20:16,743 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage226" as iconphoto: not a photo image 
+2018-04-30 10:20:16,883 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage235" as iconphoto: not a photo image 
+2018-04-30 10:20:17,008 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage244" as iconphoto: not a photo image 
+2018-04-30 10:20:17,127 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage253" as iconphoto: not a photo image 
+2018-04-30 10:20:17,250 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage262" as iconphoto: not a photo image 
+2018-04-30 10:20:23,897 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage271" as iconphoto: not a photo image 
+2018-04-30 10:20:24,087 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage280" as iconphoto: not a photo image 
+2018-04-30 10:20:24,224 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage289" as iconphoto: not a photo image 
+2018-04-30 10:20:24,344 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage298" as iconphoto: not a photo image 
+2018-04-30 10:20:24,465 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage307" as iconphoto: not a photo image 
+2018-04-30 10:20:24,588 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage316" as iconphoto: not a photo image 
+2018-04-30 10:20:32,007 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage325" as iconphoto: not a photo image 
+2018-04-30 10:20:32,263 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage334" as iconphoto: not a photo image 
+2018-04-30 10:20:32,417 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage343" as iconphoto: not a photo image 
+2018-04-30 10:20:32,547 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage352" as iconphoto: not a photo image 
+2018-04-30 10:20:32,699 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage361" as iconphoto: not a photo image 
+2018-04-30 10:20:32,830 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage370" as iconphoto: not a photo image 
+2018-04-30 10:20:39,970 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage379" as iconphoto: not a photo image 
+2018-04-30 10:20:40,205 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage388" as iconphoto: not a photo image 
+2018-04-30 10:20:40,365 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage397" as iconphoto: not a photo image 
+2018-04-30 10:20:40,511 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage406" as iconphoto: not a photo image 
+2018-04-30 10:20:40,686 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage415" as iconphoto: not a photo image 
+2018-04-30 10:20:40,839 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage424" as iconphoto: not a photo image 
+2018-04-30 11:29:57,607 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 11:29:58,124 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 11:29:58,316 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 11:29:59,418 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 11:30:00,364 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 11:30:01,340 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 11:30:02,643 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 11:30:03,779 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 12:14:54,726 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 12:14:54,835 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 12:14:55,013 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 12:14:55,159 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 12:15:59,389 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 12:15:59,527 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 12:15:59,680 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 12:15:59,797 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 12:57:41,803 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 12:57:41,923 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 12:57:41,950 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:01:08,192 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:01:08,340 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:01:08,434 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:02:09,295 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage11" as iconphoto: not a photo image 
+2018-04-30 13:02:09,492 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage20" as iconphoto: not a photo image 
+2018-04-30 13:02:09,678 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage29" as iconphoto: not a photo image 
+2018-04-30 13:02:55,875 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:02:55,893 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:02:56,050 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:02:56,212 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:02:56,371 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:03:45,067 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:03:45,086 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:03:45,233 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:03:45,350 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:03:45,501 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:04:14,519 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:04:14,544 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:04:14,711 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:04:14,907 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:04:15,077 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:06:40,319 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:06:40,338 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:06:40,492 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:06:40,671 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:06:40,822 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:06:41,020 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 13:07:37,134 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:07:37,155 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:07:37,352 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:07:37,509 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:07:37,660 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:07:37,816 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 13:09:48,669 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:09:48,688 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:09:48,835 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:09:49,016 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:09:49,177 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:09:49,319 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 13:09:49,471 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 13:09:49,625 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 13:09:49,786 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 13:09:49,936 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 13:09:50,087 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 13:09:50,247 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 13:09:50,425 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 13:09:50,589 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 13:10:35,307 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:10:35,326 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:10:35,418 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:10:35,551 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:10:35,698 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:10:35,827 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 13:10:35,968 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 13:10:36,125 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 13:10:36,271 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 13:10:36,405 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 13:10:36,550 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 13:10:36,692 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 13:10:36,838 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 13:10:37,001 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 13:35:38,332 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:35:38,428 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:35:38,474 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:38:25,992 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:38:26,057 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:38:26,101 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:49:55,334 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:49:55,398 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:49:55,440 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:51:51,118 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:51:51,247 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:51:51,348 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:54:57,486 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 13:54:57,593 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:54:57,678 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:55:50,175 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage11" as iconphoto: not a photo image 
+2018-04-30 13:55:57,725 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage21" as iconphoto: not a photo image 
+2018-04-30 13:55:58,300 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage30" as iconphoto: not a photo image 
+2018-04-30 13:55:58,742 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage39" as iconphoto: not a photo image 
+2018-04-30 13:55:59,273 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage48" as iconphoto: not a photo image 
+2018-04-30 13:55:59,767 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage57" as iconphoto: not a photo image 
+2018-04-30 13:56:00,277 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage66" as iconphoto: not a photo image 
+2018-04-30 13:56:00,778 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage75" as iconphoto: not a photo image 
+2018-04-30 13:56:01,319 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage84" as iconphoto: not a photo image 
+2018-04-30 13:56:01,885 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage93" as iconphoto: not a photo image 
+2018-04-30 13:56:02,478 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage102" as iconphoto: not a photo image 
+2018-04-30 13:56:03,041 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage111" as iconphoto: not a photo image 
+2018-04-30 13:59:26,491 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:59:26,510 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 13:59:26,861 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 13:59:27,129 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 13:59:27,400 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 13:59:27,672 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 13:59:27,966 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 13:59:28,244 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 13:59:28,561 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 13:59:28,837 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 13:59:29,123 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 13:59:29,399 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 13:59:29,677 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 13:59:29,992 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 14:01:50,357 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:01:50,376 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:01:50,603 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 14:01:50,894 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 14:01:51,154 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 14:01:51,412 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 14:01:51,683 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 14:01:51,953 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 14:01:52,262 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 14:01:52,533 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 14:01:52,826 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 14:01:53,101 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 14:01:53,382 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 14:01:53,680 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 14:02:31,898 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:02:31,923 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:02:32,272 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 14:02:32,566 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 14:02:32,864 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 14:02:33,160 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 14:02:33,507 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 14:02:33,810 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 14:02:34,118 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 14:02:34,422 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 14:02:34,747 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 14:02:35,060 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 14:02:35,403 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 14:02:35,737 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 14:07:46,313 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:07:46,338 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:07:46,696 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 14:07:47,319 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 14:07:47,625 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 14:07:47,923 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 14:07:48,267 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 14:07:48,573 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 14:07:48,879 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 14:07:49,184 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 14:07:49,508 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 14:07:49,822 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 14:07:50,145 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 14:07:50,452 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 14:07:50,768 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage118" as iconphoto: not a photo image 
+2018-04-30 14:07:51,130 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage127" as iconphoto: not a photo image 
+2018-04-30 14:58:39,281 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 14:58:39,345 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 14:58:39,391 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:00:07,455 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:00:07,523 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:00:07,568 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:01:18,669 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:02:44,343 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:02:44,444 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:02:44,527 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:02:53,396 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:05:42,219 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:05:42,280 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:05:42,323 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:05:52,007 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:07:49,282 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:07:49,346 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:07:49,406 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:07:52,539 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:11:10,125 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:11:10,187 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:11:10,230 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:11:14,472 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:11:27,942 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage11" as iconphoto: not a photo image 
+2018-04-30 15:11:29,322 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage20" as iconphoto: not a photo image 
+2018-04-30 15:11:30,678 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage29" as iconphoto: not a photo image 
+2018-04-30 15:15:17,917 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage1" as iconphoto: not a photo image 
+2018-04-30 15:15:17,983 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:15:18,022 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:15:18,606 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:15:19,351 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 15:15:20,695 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 15:15:22,035 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 15:15:37,419 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage41" as iconphoto: not a photo image 
+2018-04-30 15:15:39,022 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage50" as iconphoto: not a photo image 
+2018-04-30 15:15:40,730 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage59" as iconphoto: not a photo image 
+2018-04-30 15:15:42,349 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage68" as iconphoto: not a photo image 
+2018-04-30 15:16:17,977 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:16:17,994 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=12.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:16:18,371 - DEBUG - font_manager.py - findfont - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=8.0 to DejaVu Sans (u'/usr/local/lib/python2.7/dist-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf') with score of 0.050000 
+2018-04-30 15:16:18,813 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage10" as iconphoto: not a photo image 
+2018-04-30 15:16:19,542 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage19" as iconphoto: not a photo image 
+2018-04-30 15:16:20,282 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage28" as iconphoto: not a photo image 
+2018-04-30 15:16:21,110 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage37" as iconphoto: not a photo image 
+2018-04-30 15:16:21,853 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage46" as iconphoto: not a photo image 
+2018-04-30 15:16:22,602 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage55" as iconphoto: not a photo image 
+2018-04-30 15:16:23,396 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage64" as iconphoto: not a photo image 
+2018-04-30 15:16:24,144 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage73" as iconphoto: not a photo image 
+2018-04-30 15:16:25,010 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage82" as iconphoto: not a photo image 
+2018-04-30 15:16:25,781 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage91" as iconphoto: not a photo image 
+2018-04-30 15:16:26,554 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage100" as iconphoto: not a photo image 
+2018-04-30 15:16:27,320 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage109" as iconphoto: not a photo image 
+2018-04-30 15:16:28,195 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage118" as iconphoto: not a photo image 
+2018-04-30 15:16:29,013 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage127" as iconphoto: not a photo image 
+2018-04-30 15:16:29,847 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage136" as iconphoto: not a photo image 
+2018-04-30 15:16:30,662 - INFO - _backend_tk.py - new_figure_manager_given_figure - Could not load matplotlib icon: can't use "pyimage145" as iconphoto: not a photo image 

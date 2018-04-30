@@ -160,7 +160,151 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     #print data
     return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data),len(data_contact)
 
+def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df):
+    contact_map = util.load_contact_map(contact_map_path)
+    fields=["Position1","Position2","Count"]
+    df_total = pandas.DataFrame([],columns=fields)
+    cant = 0
+    #for coevolution score dendogram
+    Y=[]
+    for score_coev in score_coev_conformers:
+        cant = cant + 1
+        num = len(score_coev)*top_score//100
+        zmip_evol_top=score_coev[0:int(num)]
+        df = pandas.DataFrame(zmip_evol_top,columns=fields)
+        df_total=df_total.append(df)
+        
+        #
+        mi_map=np.zeros(contact_map.shape)
+        for x in map(None, zmip_evol_top):
+            pos1 = int(x[0]-1)
+            pos2 = int(x[1]-1)
+            mi_map[pos2][pos1]=1
+        mi_map=mi_map.ravel()
+        Y.append(mi_map)
+    Z = linkage(Y, 'single')
+    plot.dendogram_matrix(Z,coevolution_results + method + "_" + str(top_score) + "_dendogram.png",' Distances score top ' + str(top_score) + ' for ' + method ,structures)   
+        
+    #After append all the evolution MI TOP do this
+    #counts = dfres.groupby(['Position1','Position2']).size()
+    #print counts
+    #Count cantidad de veces que aprece en los tops
+    counts_df = pandas.DataFrame(df_total.groupby(['Position1','Position2']).size().rename('Count'))
+    #
+    sorted_df=counts_df.sort_values(by=['Count'],ascending=[False])
+    #print sorted_df
+    
+    sorted_df['ProbTop']=pandas.Series(0.0, index=sorted_df.index)
+    sorted_df['Contacts']=pandas.Series(0.0, index=sorted_df.index)
+    sorted_df['ProbContact']=pandas.Series(0.0, index=sorted_df.index)
+    #print prob_contact_map
+    for index,mi_par in sorted_df.iterrows():
+        #probablidad de que aprezca en top
+        prob_top = mi_par['Count'] * 100 / cant 
+        sorted_df.set_value(index, 'ProbTop' , prob_top/100)
+        #cantidad de contactos 
+        pos1 = int(index[0]-1)
+        pos2 = int(index[1]-1)
+        v=contact_map[pos1][pos2]
+        sorted_df.set_value(index, 'Contacts' , v)
+        #probablidad de contactos
+        prob_contact = float(v) * 100 / cant
+        sorted_df.set_value(index, 'ProbContact' , float(prob_contact)/100)
+        
+    sorted_df=sorted_df.sort_values(by=['Count','Contacts'],ascending=[False,False])
+    sorted_df.to_csv(coevolution_results + method + "_" + str(top_score) + "_coevolution.csv", sep='\t', encoding='utf-8')
+    
+    
+    
+    df = pandas.read_csv(coevolution_results + method + "_" + str(top_score) + "_coevolution.csv",delim_whitespace=True,header=0,usecols=[0,1,2,4])
+    #df=df.sort(['Count', 'Contacts'], ascending=[False, False])
+    df=df.sort_values(by=['Count', 'Contacts'],ascending=[False, False])
+    #contact map with sum score
+    cmap_triu=np.triu(contact_map, -1)
+    top_score_list=df.values.tolist()
+    #add mi values to map 
+    for x in map(None, top_score_list):
+        pos1 = int(x[0]-1)
+        pos2 = int(x[1]-1)
+        v = cmap_triu[pos2][pos1]
+        if(v!=0):
+            print ("error")
+        #set the value of the smi    
+        cmap_triu[pos2][pos1]=x[2]
+    util.save_contact_map(cmap_triu, coevolution_results + "contact_map_top_" + str(top_score)+ "_"+method+".dat")    
+    plot.contact_map_sum(cmap_triu,coevolution_results + "contact_map_top_" + str(top_score)+ "_"+method+".png",'Sum Contact Map and Sum Top '+str(top_score)+' for ' + method)   
+    
+    result_file = open(coevolution_results+method+'.txt','w')
+    result_file.write(coevolution_results+method+ '\n')
+    
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_1.png',coevolution_results,result_file, coevolution_analisys_df,1,'Thio Ecoli Conformers',1)
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_4.png',coevolution_results,result_file, coevolution_analisys_df,2,'Thio Ecoli Conformers',4)
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_8.png',coevolution_results,result_file, coevolution_analisys_df,3,'Thio Ecoli Conformers',8)
 
+    result_file.close()
+    
+    
+    
+    '''
+    correlation_p = sorted_df['Count'].corr(sorted_df['Contacts'], method='pearson')
+    correlation_k = sorted_df['Count'].corr(sorted_df['Contacts'], method='kendall')
+    correlation_s = sorted_df['Count'].corr(sorted_df['Contacts'], method='spearman')
+
+    mean = sorted_df["ProbTop"].mean()
+    median = sorted_df["ProbTop"].median()
+    var = sorted_df["ProbTop"].var()
+    mode = sorted_df["ProbTop"].mode()
+    
+    corr_df = pandas.DataFrame()
+    corr_df.set_value(1, 'pearson', correlation_p)
+    corr_df.set_value(1, 'kendall', correlation_k)
+    corr_df.set_value(1, 'spearman', correlation_s)
+    corr_df.to_csv(result_top  + "_corr.csv", sep='\t', encoding='utf-8')
+    
+    import matplotlib.pyplot as plt
+    sorted_df.plot.scatter(x='Count', y='Contacts');
+    plt.xlabel('Numero de veces que aparece en el top en la MI Conjunta')
+    plt.ylabel('Numero de contactos de la matriz conjunta')
+    plt.xticks([0,1,2,3,4,5,6,7,8])
+    plt.yticks([0,1,2,3,4,5,6,7,8])
+    plt.savefig(result_top  + "_corr.png");
+    plt.gcf().clear()
+    '''
+    
+def dendogram_matrix(contact_maps_paths,output_path,title,structures,clustering_type):
+    Y=[]
+    for cmap_pth in contact_maps_paths:
+        contact_map = util.load_contact_map(cmap_pth)
+        contact_map=contact_map.ravel()
+        Y.append(contact_map)
+    Z = linkage(Y, clustering_type)
+    plot.dendogram_matrix(Z,output_path,title,structures)
+    
+def dendogram_top_mi(top, zmip_nat,zmip_paths, output_path,title ,structures, clustering_type, shape ,window):
+    Y=[]
+    zmip_natural = util.load_zmip(zmip_nat,window)
+    util.order(zmip_natural)
+    for zmip_path in zmip_paths:
+        zmip = util.load_zmip(zmip_path,window)
+        zmip_natural,zmip=util.sincronice_mi(zmip_natural, zmip)
+        util.order(zmip)
+        #pares de posiciones 
+        num = len(zmip)*top//100
+        num = int(num)
+        zmip=zmip[0:num]   
+        cmap_with_mi=np.zeros(shape)
+        for x in map(None, zmip):
+            pos1 = int(x[0]-1)
+            pos2 = int(x[1]-1)
+            cmap_with_mi[pos2][pos1]=1
+        print zmip
+        print "-------"
+        print cmap_with_mi
+        cmap_with_mi=cmap_with_mi.ravel()
+        Y.append(cmap_with_mi)
+    Z = linkage(Y, clustering_type)
+    plot.dendogram_matrix(Z,output_path,title,structures)        
+    
 def plot_optimization(optimization_results):
     df = pandas.read_csv(optimization_results, header=0, usecols=['auc_mi','auc_di','auc_frob','auc_psicov', 'beta', 'nsus', 'run'])
     df_to_plot = df[(df['run'] == 20000)]
@@ -1459,10 +1603,8 @@ def dendogram_matrix(contact_maps_paths,output_path,title,structures,clustering_
     Z = linkage(Y, clustering_type)
     plot.dendogram_matrix(Z,output_path,title,structures)
     
-def dendogram_top_mi(top, zmip_nat,zmip_paths, output_path,title ,structures, clustering_type, shape ,window):
+def dendogram_top_mi(top, zmip_nat,zmip_paths, output_path,title ,structures, clustering_type, shape ):
     Y=[]
-    zmip_natural = util.load_zmip(zmip_nat,window)
-    util.order(zmip_natural)
     for zmip_path in zmip_paths:
         zmip = util.load_zmip(zmip_path,window)
         zmip_natural,zmip=util.sincronice_mi(zmip_natural, zmip)
