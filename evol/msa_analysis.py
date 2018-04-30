@@ -140,6 +140,7 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     
     top_df.set_value(index,'nat_'+method,str(nat_contact*100/num))
     top_df.set_value(index,'evol_'+method,str(evol_contact*100/num))
+    
     data_contact=[]
     for d in data:
         pos1 = int(d[0]-1)
@@ -160,7 +161,7 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     #print data
     return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data),len(data_contact)
 
-def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df):
+def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df,index_df):
     contact_map = util.load_contact_map(contact_map_path)
     fields=["Position1","Position2","Count"]
     df_total = pandas.DataFrame([],columns=fields)
@@ -234,13 +235,27 @@ def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_m
     util.save_contact_map(cmap_triu, coevolution_results + "contact_map_top_" + str(top_score)+ "_"+method+".dat")    
     plot.contact_map_sum(cmap_triu,coevolution_results + "contact_map_top_" + str(top_score)+ "_"+method+".png",'Sum Contact Map and Sum Top '+str(top_score)+' for ' + method)   
     
+    
+    
+    
+    
+    #Review how to show the conjunction of top SCORES
     result_file = open(coevolution_results+method+'.txt','w')
     result_file.write(coevolution_results+method+ '\n')
     
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_1.png',coevolution_results,result_file, coevolution_analisys_df,1,'Thio Ecoli Conformers',1)
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_4.png',coevolution_results,result_file, coevolution_analisys_df,2,'Thio Ecoli Conformers',4)
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_8.png',coevolution_results,result_file, coevolution_analisys_df,3,'Thio Ecoli Conformers',8)
-
+    
+    coevolution_analisys_df.set_value(index_df,'top',str(top_score))
+    coevolution_analisys_df.set_value(index_df,'contact_threashold',1)
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_1.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',1)
+    index_df=index_df + 1
+    coevolution_analisys_df.set_value(index_df,'top',str(top_score))
+    coevolution_analisys_df.set_value(index_df,'contact_threashold',4)
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_4.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',4)
+    index_df=index_df + 1
+    coevolution_analisys_df.set_value(index_df,'top',str(top_score))
+    coevolution_analisys_df.set_value(index_df,'contact_threashold',8)
+    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_8.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',8)
+    
     result_file.close()
     
     

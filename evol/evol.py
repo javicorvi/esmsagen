@@ -760,52 +760,28 @@ def analyse_top_coevolution_conformers(execution_folder,structures,sum_contact_m
     
     
     coevolution_analisys_df = pandas.DataFrame()
-    coevolution_analisys_df.set_value(1,'top',0.5)
-    coevolution_analisys_df.set_value(2,'top',1)
-    coevolution_analisys_df.set_value(3,'top',2)
-    
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,0.5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)
-    msa_analysis.top_coevolution_analysis('di', di_coev,0.5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df)     
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,0.5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df)            
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,0.5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df)            
-    
-    coevolution_analisys_df.to_csv(coevolution_results +'top_0.5.csv')
-    
-    coevolution_analisys_df = pandas.DataFrame()
-    coevolution_analisys_df.set_value(1,'top',0.5)
-    coevolution_analisys_df.set_value(2,'top',1)
-    coevolution_analisys_df.set_value(3,'top',2)
-    
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,1, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)
-    msa_analysis.top_coevolution_analysis('di', di_coev,1, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df)     
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,1, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df)            
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,1, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df)
+    index=1
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,0.5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)
+    msa_analysis.top_coevolution_analysis('di', di_coev,0.5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)     
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,0.5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)            
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,0.5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)            
+    index=index*3 +1
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,1, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,1, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,1, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,1, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)  
+    index=index*3 + 1
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df,index)   
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    index=index*3
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df,index)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)              
 
-    coevolution_analisys_df.to_csv(coevolution_results +'top_1.csv')
-
-    coevolution_analisys_df = pandas.DataFrame()
-    coevolution_analisys_df.set_value(1,'top',0.5)
-    coevolution_analisys_df.set_value(2,'top',1)
-    coevolution_analisys_df.set_value(3,'top',2)
-    
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)
-    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df) 
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)            
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)
-
-    coevolution_analisys_df.to_csv(coevolution_results +'top_2.csv')
-    
-    coevolution_analisys_df = pandas.DataFrame()
-    coevolution_analisys_df.set_value(1,'top',0.5)
-    coevolution_analisys_df.set_value(2,'top',1)
-    coevolution_analisys_df.set_value(3,'top',2)
-    
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)
-    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df)     
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)           
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df)            
-
-    coevolution_analisys_df.to_csv(coevolution_results +'top_3.csv')
+    coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
    
     
     
