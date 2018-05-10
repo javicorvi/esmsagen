@@ -84,5 +84,28 @@ def analyse_top_coevolution_conformers():
     contact_map_dendogram_output = execution_folder + 'contact_map_dendogram.png'
     contact_maps_paths = [execution_folder + pdb + '/contact_map_sync.dat' for pdb in structures]
     msa_analysis.dendogram_matrix(contact_maps_paths, contact_map_dendogram_output,'Contact Map Clustering entre Conformeros',structures,'single')   
-analyse_top_coevolution_conformers()
+#analyse_top_coevolution_conformers()
 
+def plot_comparation_top():
+    execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
+    top_result = execution_folder + "coevolution_results/top_thio_ecoli_conformers.csv"
+    msa_analysis.plot_comparation_top(top_result, execution_folder + "coevolution_results/")
+#plot_comparation_top()    
+
+def conjunction_analisys():
+    execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
+    structures = [ '1XOA', '1XOB', '2H74','1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17','2TRX']
+    num=3000
+    evol.generate_combined_msa(execution_folder, structures, num)
+
+        
+    
+    evol.analisys_msa_conjuntion_thio_ecoli_conformeros(execution_folder, structures,num)
+
+    evol.analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder, structures,num)
+    
+conjunction_analisys()    
+# conjunction_analisys(3000)
+# conjunction_analisys(5000)
+# conjunction_analisys(10000)
+    

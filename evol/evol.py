@@ -15,7 +15,7 @@ import constants as const
 import pdb
 import pandas
 import logging 
-from paramiko.util import constant_time_bytes_eq
+
 
 import constants
 from evol import msa_analysis
@@ -762,9 +762,13 @@ def analyse_top_coevolution_conformers(execution_folder,structures,sum_contact_m
     coevolution_analisys_df = pandas.DataFrame()
     index=1
     msa_analysis.top_coevolution_analysis('mi', mi_coev,0.5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)
+    coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
     msa_analysis.top_coevolution_analysis('di', di_coev,0.5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)     
+    coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
     msa_analysis.top_coevolution_analysis('frob', frob_coev,0.5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)            
+    coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
     msa_analysis.top_coevolution_analysis('psicov', psicov_coev,0.5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)            
+    coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
     index=index*3 +1
     msa_analysis.top_coevolution_analysis('mi', mi_coev,1, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
     msa_analysis.top_coevolution_analysis('di', di_coev,1, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
@@ -772,19 +776,112 @@ def analyse_top_coevolution_conformers(execution_folder,structures,sum_contact_m
     msa_analysis.top_coevolution_analysis('psicov', psicov_coev,1, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)  
     index=index*3 + 1
     msa_analysis.top_coevolution_analysis('mi', mi_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df,index)   
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)              
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    index=index*3
+    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)   
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)  
+    index=index*3 +1
     msa_analysis.top_coevolution_analysis('mi', mi_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,mi_natural,coevolution_analisys_df,index)       
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)             
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
+    index=index*3 +1
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,4, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,4, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,4, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,4, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
+    index=index*3 + 1
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
 
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
    
     
     
+
+def generate_combined_msa(execution_folder,structures,num):
+    mi_msa=[]
+    di_msa=[]
+    frob_msa=[]
+    psicov_msa=[]
+    mi_msa_noid=[]
+    di_msa_noid=[]
+    frob_msa_noid=[]
+    psicov_msa_noid=[]
+    for pdb_name in structures:
+        execution_folder_conf = execution_folder + pdb_name + "/"
+        optimization_folder = execution_folder_conf + "optimization/"
+        curated_sequences_path = optimization_folder + "curated_sequences/"
+        best_01_coev_values_path= curated_sequences_path + "best_01_coev_values.csv"
+        best_01_coev_df = pandas.read_csv(best_01_coev_values_path, header=0, index_col=0)
+        for index_opti, best_conf in best_01_coev_df.iterrows(): 
+            beta = str(best_conf['beta'])
+            nsus = str(best_conf['nsus'])
+            runs = str(int(best_conf['runs']))
+            sufix = "sequences-beta" + beta + "-nsus" + nsus + "-runs" + runs + ".fasta"
+            msa_path=curated_sequences_path+sufix
+            msa_path_no_id=curated_sequences_path+sufix+ '_no_seq_ids.fasta'
+            if(best_conf['method']=='mi'):
+                mi_msa.append(msa_path)
+                mi_msa_noid.append(msa_path_no_id)
+            if(best_conf['method']=='di'):
+                di_msa.append(msa_path)
+                di_msa_noid.append(msa_path_no_id)
+            if(best_conf['method']=='frob'):
+                frob_msa.append(msa_path)
+                frob_msa_noid.append(msa_path_no_id)
+            if(best_conf['method']=='psicov'):
+                psicov_msa.append(msa_path)
+                psicov_msa_noid.append(msa_path_no_id)
+    for msa_ in mi_msa:
+        msa.create_msa_without_id(msa_, str(msa_) + '_no_seq_ids.fasta')
+    for msa_ in di_msa:
+        msa.create_msa_without_id(msa_, str(msa_) + '_no_seq_ids.fasta')
+    for msa_ in frob_msa:
+        msa.create_msa_without_id(msa_, str(msa_) + '_no_seq_ids.fasta')
+    for msa_ in psicov_msa:
+        msa.create_msa_without_id(msa_, str(msa_) + '_no_seq_ids.fasta')
+    
+    msa_conjuntion_bootstrap_path = execution_folder + 'msa_conjuntion_' + str(num) + '/'
+    if not os.path.exists(msa_conjuntion_bootstrap_path):
+        os.makedirs(msa_conjuntion_bootstrap_path)
+        
+    msa.create_msa_bootstrap(mi_msa_noid, msa_conjuntion_bootstrap_path + 'mi_msa_bootstrap_' + str(num) + '.fasta', num)
+    msa.create_msa_bootstrap(di_msa_noid, msa_conjuntion_bootstrap_path + 'di_msa_bootstrap_' + str(num) + '.fasta', num)
+    msa.create_msa_bootstrap(frob_msa_noid, msa_conjuntion_bootstrap_path + 'frob_msa_bootstrap_' + str(num) + '.fasta', num)
+    msa.create_msa_bootstrap(psicov_msa_noid, msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta', num)
+    
+    
+        
+def analisys_msa_conjuntion_thio_ecoli_conformeros(execution_folder,structures,num=1500):
+    msa_conjuntion_bootstrap_path = execution_folder + 'msa_conjuntion_' + str(num) + '/'
+    msa_bootstrap = msa_conjuntion_bootstrap_path + 'msa_bootstrap_' + str(num) + '.fasta'
+    mi_data_output_path = msa_conjuntion_bootstrap_path + 'mi_data_path/'
+    msa_conservation_path = msa_conjuntion_bootstrap_path + 'conservation/'
+    if not os.path.exists(mi_data_output_path):
+        os.makedirs(mi_data_output_path)
+    if not os.path.exists(msa_conservation_path):
+        os.makedirs(msa_conservation_path)
+    mi_data_path = mi_data_output_path + "zmip_bootstrap.csv"
+    msa_conservation_path = msa_conservation_path + 'bootstrap_'
+    msa_bootstrap_clustered = msa_bootstrap + '_cluster_62.cluster'
+    msa.clustering_singular("0.62", msa_bootstrap, msa_bootstrap_clustered)
+    dataanalisys.evol_analisys(msa_bootstrap_clustered, mi_data_path, msa_conservation_path, 'Bootstrap THIO_ECOLI Conformeros')
+ 
+ 
+def analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder,structures, num=1500):
+    mi_data_output_path = execution_folder + 'mi_data_path/'
+    mi_data_path_file = mi_data_output_path + "zmip_bootstrap.csv"
+    zmip_natural_result_file = "../THIO_ECOLI_4_107_2TRX_A/natural/zmip_PF00085_THIO_ECOLI_reference.csv"
+    contact_map_path = '../THIO_ECOLI_4_107/sum_contact_map.dat'
+    # zmip_reference_result_path = '../THIO_ECOLI_4_107/2TRX/mi_data_path/zmip_sequences-beta5.0-nsus15.0-runs20000.csv'
+    top_df = pandas.DataFrame()
+    pdb_name = 'THIO_ECOLI CONJUNCTION CONFORMEROS'
+    dataanalisys.run_analisys_singular(top_df, 1, zmip_natural_result_file, mi_data_path_file, contact_map_path, mi_data_output_path, window, pdb_name) 
+    # dataanalisys.top_rank_intersection(execution_folder, contact_map_path,zmip_natural_result_path, mi_data_path_file, top_df, zmip_reference_result_path, index=1, window, contact_threshold=1, top_threshold=1, sinchronize_with_natural=True)
+    
+    top_df.to_csv(execution_folder + 'result_conjunction.csv')
     
     
    
