@@ -9,6 +9,7 @@ import numpy as np
 from sklearn import metrics
 import matplotlib.cm as cm
 from scipy.cluster.hierarchy import dendrogram
+from Canvas import Line
 '''
 Generates a plot describe the contacts with de MI of the natural and evolution msa
 '''
@@ -387,21 +388,32 @@ def conservation_comparation(msas_entropy, output_file, title):
 
 def top_comparation(df, contact_threshold ,output_path):
     #df_to_plot=df[(df['beta']==b)]
-    plt.scatter(df['top'], df['nat_contact_%'],color='blue',label=None)
-    plt.plot(df['top'], df['nat_contact_%'],color='blue',label='Natural')
+    plt.scatter(df['top'], df['evol_mi'],color='green',label=None)
+    plt.plot(df['top'], df['evol_mi'],color='green',label='MI EVOL')
+    
+    plt.scatter(df['top'], df['evol_di'],color='blue',label=None)
+    plt.plot(df['top'], df['evol_di'],color='blue',label='DI EVOL')
+    
+    plt.scatter(df['top'], df['evol_frob'],color='yellow',label=None)
+    plt.plot(df['top'], df['evol_frob'],color='yellow',label='FROB EVOL')
+    
+    plt.scatter(df['top'], df['evol_psicov'],color='red',label=None)
+    plt.plot(df['top'], df['evol_psicov'],color='red',label='PSICOV EVOL')
+    
+    plt.scatter(df['top'], df['nat_mi'],color='green',label=None)
+    plt.plot(df['top'], df['nat_mi'],color='green',label='MI NAT',linestyle=':')
+    
+    plt.scatter(df['top'], df['nat_di'],color='blue',label=None)
+    plt.plot(df['top'], df['nat_di'],color='blue',label='DI NAT',linestyle=':')
+    
+    plt.scatter(df['top'], df['nat_frob'],color='yellow',label=None)
+    plt.plot(df['top'], df['nat_frob'],color='yellow',label='FROB NAT',linestyle=':')
+    
+    plt.scatter(df['top'], df['nat_psicov'],color='red',label=None)
+    plt.plot(df['top'], df['nat_psicov'],color='red',label='PSICOV NAT',linestyle=':')
     
     
-    
-    plt.scatter(df['top'], df['ref_contact_%'],color='green',label=None)
-    plt.plot(df['top'], df['ref_contact_%'],color='green',label='2TRX')
-    
-    plt.scatter(df['top'], df['evol_contact_%'],color='orange',label=None)
-    plt.plot(df['top'], df['evol_contact_%'],color='orange',label='Sumatoria de TOP MI')
-    
-    plt.scatter(df['top'], df['prom_contact_%'],color='red',label=None)
-    plt.plot(df['top'], df['prom_contact_%'],color='red',label='Promedio')
-    
-    plt.legend(loc="upper right",prop={'size':10})
+    plt.legend(loc="upper right",prop={'size':8})
     plt.xticks([0,0.5,1,2,3,4,5])
     plt.yticks([0,10,20,30,40,50,60,70,80,90,100])
     #plt.axis([0, 20, 0.5, 1])
@@ -409,8 +421,10 @@ def top_comparation(df, contact_threshold ,output_path):
     plt.ylabel('% de contactos')
     plt.title('Procentaje de contactos por Top. Contacts ' + contact_threshold)
     #plt.show()   
-    plt.savefig(output_path)
+    plt.savefig(output_path +  "_with_nat.png")
     plt.gcf().clear()
+    
+    '''
     
     plt.scatter(df['top'], df['match_positions_reference'],color='green',label=None)
     plt.plot(df['top'], df['match_positions_reference'],color='green',label='2TRX')
@@ -433,7 +447,7 @@ def top_comparation(df, contact_threshold ,output_path):
     
     
     plt.gcf().clear()
-
+    '''
 
 def top_comparation_sub(df, contact_threshold ,output_path):
     #df_to_plot=df[(df['beta']==b)]

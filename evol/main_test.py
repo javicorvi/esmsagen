@@ -47,7 +47,10 @@ def analyse_optimus_msa():
     #natural_information()  
     evol.analyse_optimus_msa(execution_folder,'2TRX',natural_result_path)
     
-#analyze_optimus_msa()
+analyse_optimus_msa()
+
+
+
 
 def evol_thio_ecoli_conformers():
     chain_name = "A"
@@ -104,7 +107,7 @@ def conjunction_analisys():
 
     evol.analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder, structures,num)
     
-conjunction_analisys()    
+#conjunction_analisys()    
 # conjunction_analisys(3000)
 # conjunction_analisys(5000)
 # conjunction_analisys(10000)

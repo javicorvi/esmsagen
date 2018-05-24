@@ -140,7 +140,7 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     
     top_df.set_value(index,'nat_'+method,str(nat_contact*100/num))
     top_df.set_value(index,'evol_'+method,str(evol_contact*100/num))
-    
+    top_df.set_value(index,'pairs_'+method,num)
     data_contact=[]
     for d in data:
         pos1 = int(d[0]-1)
@@ -240,7 +240,7 @@ def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_m
     
     
     #Review how to show the conjunction of top SCORES
-    result_file = open(coevolution_results+method+'.txt','w')
+    result_file = open(coevolution_results+ str(top_score)+ "_"+method+".txt",'w')
     result_file.write(coevolution_results+method+ '\n')
     
     
@@ -319,6 +319,16 @@ def dendogram_top_mi(top, zmip_nat,zmip_paths, output_path,title ,structures, cl
         Y.append(cmap_with_mi)
     Z = linkage(Y, clustering_type)
     plot.dendogram_matrix(Z,output_path,title,structures)        
+
+def plot_comparation_top(top_result, execution_folder):
+    top_df = pandas.read_csv(top_result, header=0)
+    df_1 = top_df.loc[top_df['contact_threashold'] == 1]
+    plot.top_comparation(df_1, '>= 1', execution_folder + 'top_comparation_contact_1.png')
+    df_4 = top_df.loc[top_df['contact_threashold'] == 4]
+    plot.top_comparation(df_4, '>= 4', execution_folder + 'top_comparation_contact_4.png')
+    df_8 = top_df.loc[top_df['contact_threashold'] == 8]
+    plot.top_comparation(df_8, '= 8', execution_folder + 'top_comparation_contact_8.png')
+
     
 def plot_optimization(optimization_results):
     df = pandas.read_csv(optimization_results, header=0, usecols=['auc_mi','auc_di','auc_frob','auc_psicov', 'beta', 'nsus', 'run'])
