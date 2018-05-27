@@ -24,17 +24,30 @@ def coevolution_analisys(method, top_df,index, zmip_natural, zmip_evol, outputh_
     #util.save_list_to_csv(zmip_natural_result_path+"_order.csv", zmip_natural, ['Position 1',' Position 2','ZMIP'])
     contact_map=util.load_contact_map(contact_map_path)
     #Agrego los numeros de contactos de la matriz
-    contacts_count = np.count_nonzero(contact_map>=contact_threashold)
+    contacts_count = float(np.count_nonzero(contact_map>=contact_threashold))
     #df.set_value(index, 'contact_threashold', contact_threashold)
     #df.set_value(index, 'contacts_count', contacts_count)
     #sincronizo las senales de coevolucion para calcular spearman rank correlation
     m,m2=util.sincronice_mi(zmip_natural, zmip_evol)
+    util.order(m)
+    util.order(m2)
     m_=[row [2] for row in m]
     m2_=[row[2] for row in m2]
     
+    
     #Agrego spearman entre natural y evolucionado
-    value_spearman = spearman(m_,m2_)
-    top_df.set_value(index, method+'_spearman_evol_nat', value_spearman) 
+    
+    '''m_pairs = [(row[0],row[1]) for row in m]
+    m2_pairs = [(row[0],row[1]) for row in m2] 
+    print m_pairs
+    print m2_pairs
+    df_c = pandas.DataFrame()
+    df_c['pair']=m_pairs
+    df_c['pair2']=m2_pairs
+    correlation_s = df_c['pair'].corr(df_c['pair2'], method='spearman')
+    '''
+   # value_spearman = spearman(m_pairs,m2_pairs)
+    #top_df.set_value(index, method+'_spearman_evol_nat', value_spearman) 
     #0.100578206022
     #0.102156238538
     
@@ -72,13 +85,13 @@ def coevolution_analisys(method, top_df,index, zmip_natural, zmip_evol, outputh_
             
     result_file = open(outputh_path+method+'.txt','w')
     result_file.write(outputh_path+method+ '\n')
-    result_file.write(" SPEARMAN RANK CORRELATION " + str(value_spearman)+ '\n')
-    top_coevolution(zmip_natural,zmip_evol,method,0.5,contact_map,outputh_path+method+'top_0.5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,1, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,1,contact_map,outputh_path+method+'top_1percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,2, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,2,contact_map,outputh_path+method+'top_2percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,3, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,3,contact_map,outputh_path+method+'top_3percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,4, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,4,contact_map,outputh_path+method+'top_4percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,5, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,5,contact_map,outputh_path+method+'top_5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,6, pdb_name,contact_threashold)
+    #result_file.write(" SPEARMAN RANK CORRELATION " + str(value_spearman)+ '\n')
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,0.5,contact_map,outputh_path+method+'top_0.5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,1, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,1,contact_map,outputh_path+method+'top_1percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,2, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,2,contact_map,outputh_path+method+'top_2percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,3, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,3,contact_map,outputh_path+method+'top_3percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,4, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,4,contact_map,outputh_path+method+'top_4percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,5, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,5,contact_map,outputh_path+method+'top_5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,6, pdb_name,contact_threashold)
     
     #top_rank(zmip_natural,m2,3,contact_map,mi_result_file_path+'top_3percent_withcon.png',mi_result_file_path,result_file)
     #top_rank(zmip_natural,m2,4,contact_map,mi_result_file_path+'top_4percent_withcon.png',mi_result_file_path,result_file)
@@ -93,7 +106,7 @@ Plots information about the top_rank.
 For example give information about the top_rank matches
 Plot a matrix with the contact and the high values (top_rank) of the evolution and the natural msa
 '''
-def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1):
+def top_coevolution(natural_coevolution,evolutionated_coevolution,contacts_count,method,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1):
     num = len(natural_coevolution)*top//100
     a=natural_coevolution[0:int(num)]
     b=evolutionated_coevolution[0:int(num)]
@@ -139,7 +152,9 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     result_file.write("MATCH POSITIONS  : " + str(data) + '\n')
     
     top_df.set_value(index,'nat_'+method,str(nat_contact*100/num))
+    top_df.set_value(index,'nat_from_total_'+method,str(nat_contact*100/contacts_count))
     top_df.set_value(index,'evol_'+method,str(evol_contact*100/num))
+    top_df.set_value(index,'evol_from_total_'+method,str(evol_contact*100/contacts_count))
     top_df.set_value(index,'pairs_'+method,num)
     data_contact=[]
     for d in data:
