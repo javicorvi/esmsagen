@@ -466,6 +466,8 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     msas_entropy.append([l, 'Natural', 'blue'])
     plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
     
+    msa.seq_to_logo(mi_msa_opt, 'MI Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
+    
     best_01_coev_values.at[1,'method']='mi'
     best_01_coev_values.at[1,'beta']=beta 
     best_01_coev_values.at[1,'nsus']=nsus 
@@ -514,7 +516,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     l.insert(0, None)
     msas_entropy.append([l, 'Natural', 'blue'])
     plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
-    
+    msa.seq_to_logo(di_msa_opt, 'DI Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_frob"],ascending=False)
     top_auc_mi=curated_result_df.iloc[0]
@@ -558,7 +560,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     l.insert(0, None)
     msas_entropy.append([l, 'Natural', 'blue'])
     plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
-    
+    msa.seq_to_logo(frob_msa_opt, 'FROB Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_psicov"],ascending=False)
@@ -604,6 +606,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     msas_entropy.append([l, 'Natural', 'blue'])
     plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
     
+    msa.seq_to_logo(psicov_msa_opt, 'PSICOV Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     
     #PLOT TODO JUNTO
     msas_entropy=[]
@@ -697,11 +700,6 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     
     plot.roc_curve_(targets, sc, labels, 'Best AUC_01 ROC curves for coevolution methods' ,colors, '',curated_sequences_path + 'best_rocs_auc_01.png')
     
-    #TODO Conservation MSA
-    #conservation_msa
-    
-    #
-    
     #top_rank_result = top_rank(zmip_natural,m2,1,contact_map,mi_result_file_path+'top_1percent_withcon'+contact_threashold_str+'.png',mi_result_file_path,result_file,top_df,2, pdb_name,contact_threashold)
     natural_mi_result_path = natural_result_path + "mi.csv"
     natural_frob_result_path = natural_result_path + "frob.csv"
@@ -788,7 +786,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     msa_analysis.coevolution_analisys('FROB',coevolution_analisys_df, 1, frob_natural, frob_evol, curated_sequences_path_best_results, contact_map_sync,  constants.neighbour_window, pdb_name)
     msa_analysis.coevolution_analisys('PSICOV',coevolution_analisys_df, 1, psicov_natural, psicov_evol, curated_sequences_path_best_results, contact_map_sync,  constants.neighbour_window, pdb_name)
     
-    coevolution_analisys_df.to_csv(curated_sequences_path_best_results +'tops_contact_threashold_1csv')
+    coevolution_analisys_df.to_csv(curated_sequences_path_best_results +'tops_contact_threashold_1.csv')
     
     #msa_analysis.top_coevolution(natural_coevolution,evolutionated_coevolution,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1)
     

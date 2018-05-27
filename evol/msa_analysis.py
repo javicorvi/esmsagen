@@ -34,7 +34,7 @@ def coevolution_analisys(method, top_df,index, zmip_natural, zmip_evol, outputh_
     
     #Agrego spearman entre natural y evolucionado
     value_spearman = spearman(m_,m2_)
-    #df.set_value(index, 'spearman_evol_nat', value_spearman) 
+    top_df.set_value(index, method+'_spearman_evol_nat', value_spearman) 
     #0.100578206022
     #0.102156238538
     
@@ -148,18 +148,13 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
         v=contact_map[pos1][pos2]
         if(v >= contact_threashold):
             data_contact.append(d)
-    result_file.write("MATCH POSITIONS CONTACTS BETWEEN NAT AND EVOL (NO WINDOW) : " + str(len(data_contact))+ '\n')
-    top_df.set_value(index,'match_'+method,str(len(data_contact)))
-    result_file.write("MATCH POSITIONS CONTACTS  : " + str(data_contact) + '\n')
+    result_file.write("MATCH POSITIONS CONTACTS BETWEEN NAT AND EVOL (NO WINDOW) %: " + str(len(data_contact)*100/num)+ '\n')
+    top_df.set_value(index,'match_'+method,str(len(data_contact)*100/num ))
+    top_df.set_value(index,'nc_match_'+method,str(len(data)*100/num ))
+    result_file.write("MATCH POSITIONS CONTACTS % : " + str(len(data_contact)*100/num ) + '\n')
     result_file.write("************************************************************************" + '\n')
-    
-    
-    print "TOP : "  + str(top) + "% PAR POSITIONS : " + str(num)
-    print "MATCH POSITIONS BETWEEN NAT AND EVOL (NO WINDOW) : " + str(len(data))
-    print "NATURAL CONTACTS QUANTITY : " + str(nat_contact) + " - %"+ str(nat_contact*100/num)
-    print "EVOL CONTACTS QUANTITY : " + str(evol_contact) + " - %"+ str(evol_contact*100/num)
     #print data
-    return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data),len(data_contact)
+    return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data)*100/num,len(data_contact)*100/num
 
 def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df,index_df):
     contact_map = util.load_contact_map(contact_map_path)
