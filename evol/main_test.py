@@ -47,7 +47,7 @@ def analyse_optimus_msa():
     #natural_information()  
     evol.analyse_optimus_msa(execution_folder,'2TRX',natural_result_path)
 
-analyse_optimus_msa()
+#analyse_optimus_msa()
 
 
 
@@ -87,7 +87,7 @@ def analyse_top_coevolution_conformers():
     contact_map_dendogram_output = execution_folder + 'contact_map_dendogram.png'
     contact_maps_paths = [execution_folder + pdb + '/contact_map_sync.dat' for pdb in structures]
     msa_analysis.dendogram_matrix(contact_maps_paths, contact_map_dendogram_output,'Contact Map Clustering entre Conformeros',structures,'single')   
-#analyse_top_coevolution_conformers()
+analyse_top_coevolution_conformers()
 
 def plot_comparation_top():
     execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
