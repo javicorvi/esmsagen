@@ -451,9 +451,9 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     mi_01_path = mi_data_path + "mi_" + sufix + ".csv"
     
     #conservation
-    mi_msa_opt= curated_sequences_path + sufix + ".fasta"
+    mi_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
     mi_msa_conservation= conservation_path + sufix + ".csv"
-    msa.summary(mi_msa_opt, mi_msa_conservation, 'Conservation ' + sufix + ".fasta")
+    msa.summary(mi_msa_opt, mi_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
     
     msas_entropy=[]
     df_c = pandas.read_csv(mi_msa_conservation, usecols=['Entropy'])
@@ -502,9 +502,9 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[2,'runs']=runs 
     
     #conservation
-    di_msa_opt= curated_sequences_path + sufix + ".fasta"
+    di_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
     di_msa_conservation= conservation_path + sufix + ".csv"
-    msa.summary(di_msa_opt, di_msa_conservation, 'Conservation ' + sufix + ".fasta")
+    msa.summary(di_msa_opt, di_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
     
     msas_entropy=[]
     df_c = pandas.read_csv(di_msa_conservation, usecols=['Entropy'])
@@ -546,9 +546,9 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[3,'runs']=runs 
     
     #conservation
-    frob_msa_opt= curated_sequences_path + sufix + ".fasta"
+    frob_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
     frob_msa_conservation= conservation_path + sufix + ".csv"
-    msa.summary(frob_msa_opt, frob_msa_conservation, 'Conservation ' + sufix + ".fasta")
+    msa.summary(frob_msa_opt, frob_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
     
     msas_entropy=[]
     df_c = pandas.read_csv(frob_msa_conservation, usecols=['Entropy'])
@@ -591,9 +591,9 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[4,'runs']=runs 
     
     #conservation
-    psicov_msa_opt= curated_sequences_path + sufix + ".fasta"
+    psicov_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
     psicov_msa_conservation= conservation_path + sufix + ".csv"
-    msa.summary(psicov_msa_opt, psicov_msa_conservation, 'Conservation ' + sufix + ".fasta")
+    msa.summary(psicov_msa_opt, psicov_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
     
     msas_entropy=[]
     df_c = pandas.read_csv(psicov_msa_conservation, usecols=['Entropy'])
@@ -609,12 +609,12 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     msa.seq_to_logo(psicov_msa_opt, 'PSICOV Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     
     #PLOT TODO JUNTO
-    '''
+    
     msas_entropy=[]
     df_c = pandas.read_csv(mi_msa_conservation, usecols=['Entropy'])
     l=df_c['Entropy'].tolist()
     l.insert(0, None)
-    msas_entropy.append([l, 'Evol Best MI and FROB (Beta=5 Nsus=20)', 'orange'])
+    msas_entropy.append([l, 'Evol Best MI and FROB (Beta=5 Nsus=20)', 'green'])
     
     df_c = pandas.read_csv(di_msa_conservation, usecols=['Entropy'])
     l=df_c['Entropy'].tolist()
@@ -625,7 +625,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     l=df_c['Entropy'].tolist()
     l.insert(0, None)
     msas_entropy.append([l, 'Evol Best PSICOV (Beta=7 Nsus=20)', 'red'])
-    '''
+    
     
     df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
     l=df_c['Entropy'].tolist()
