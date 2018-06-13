@@ -182,13 +182,20 @@ def msa_information(input_msa, output_msa, msa_name):
     print "msa_information"
     print("--- %s seconds ---" % (time.time() - start_time))
 
-def seq_to_logo(msas,structures):
+def seq_to_logo(msa,title):
+    print "seq to logo"
+    import subprocess 
+    #subprocess.call("../lib/seq2logo-2.0/Seq2Logo.py -f " + msa + " -o "+msa+'_logo'+" -I 2 -u Bits -t '"+title+"' --format 'JPEG,PNG,SVG,PDF'", shell=True)
+    print "end"
+
+
+def seq_to_logo_msas(msas,structures):
     print "seq to logo"
     import subprocess 
     i=0
     for msa in msas:
         #subprocess.call("seq2logo-2.0/Seq2Logo.py -f seq2logo-2.0/test_data/fasta.txt -o logo_example -I 2 -u Bits -t 'Titulo_Logo' --formats 'JPEG,PNG,SVG,PDF'", shell=True)
-        subprocess.call("seq2logo-2.0/Seq2Logo.py -f " + msa + " -o "+msa+'_logo'+" -I 2 -u Bits -t "+structures[i]+" --format 'JPEG,PNG,SVG,PDF'", shell=True)
+        seq_to_log(msa, structures[i])
         i=i+1
     #call(["seq2logo-2.0/Seq2Logo.py", "-f" ,"seq2logo-2.0/test_data/fasta.txt"])
     #os.system("script2.py 1")

@@ -262,6 +262,8 @@ def natural_information(execution_folder):
     msa.psicov(natural_msa+"_noid.aln",natural_psicov_result_path)
     
     
+    
+    
     target, scores = msa_analysis.getTargetScores(natural_mi_result_path, contact_map_sync, constants.neighbour_window)
     auc, auc01 = util.getAUC(target, scores)
     target_di, scores_di = msa_analysis.getTargetScores(natural_di_result_path, contact_map_sync, constants.neighbour_window, split_char=' ')
@@ -296,9 +298,9 @@ def natural_information(execution_folder):
     sc.append(scores_psicov)
     targets.append(target_psicov)
     
-    plot.roc_curve_(targets, sc, labels, 'MSA Natural ROC curves' ,colors, '',natural_result_path + 'rocs.png')
+    #plot.roc_curve_(targets, sc, labels, 'MSA Natural ROC curves' ,colors, '',natural_result_path + 'rocs.png')
     
-    
+    msa.summary(natural_msa, natural_result_path + "conservation.csv", 'PF00085_THIO_ECOLI_reference')
     
 def compare_evolution_with_natural(execution_folder, protein, pdb_name, chain, top_result=0.80):
     optimization_folder = execution_folder + "optimization/"
@@ -398,7 +400,7 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     di_data_path = curated_sequences_path + "di/"
     frob_data_path = curated_sequences_path + "frob/"
     psicov_data_path = curated_sequences_path + "psicov/"
-    conservation_path = curated_sequences_path + "conservation/"
+    
     
     curated_sequences_result = curated_sequences_path + "resuts.csv"
     optimization_result = optimization_folder + "optimization.csv"
@@ -408,8 +410,15 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_coev_values_path= curated_sequences_path + "best_coev_values.csv"
     best_01_coev_values_path= curated_sequences_path + "best_01_coev_values.csv"
     
+    conservation_path = curated_sequences_path_best_results + "conservation/"
+    
+    
     if not os.path.exists(curated_sequences_path_best_results):
         os.makedirs(curated_sequences_path_best_results)   
+    
+    if not os.path.exists(conservation_path):
+        os.makedirs(conservation_path)   
+    
     
     columns = ["method", "auc_01", "beta", "nsus", "runs"]
     best_01_coev_values = pandas.DataFrame(columns=columns)
@@ -430,6 +439,8 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_coev_values.at[1,'runs']=runs
     
     
+    
+    
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_01_mi"],ascending=False)
     top_auc_mi=curated_result_df.iloc[0]
@@ -438,6 +449,24 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     runs = str(int(top_auc_mi['run']))
     sufix = "sequences-beta" + beta + "-nsus" + nsus + "-runs" + runs
     mi_01_path = mi_data_path + "mi_" + sufix + ".csv"
+    
+    #conservation
+    mi_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
+    mi_msa_conservation= conservation_path + sufix + ".csv"
+    msa.summary(mi_msa_opt, mi_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
+    
+    msas_entropy=[]
+    df_c = pandas.read_csv(mi_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol', 'red'])
+    df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
+    
+    msa.seq_to_logo(mi_msa_opt, 'MI Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     
     best_01_coev_values.at[1,'method']='mi'
     best_01_coev_values.at[1,'beta']=beta 
@@ -472,7 +501,22 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[2,'nsus']=nsus 
     best_01_coev_values.at[2,'runs']=runs 
     
+    #conservation
+    di_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
+    di_msa_conservation= conservation_path + sufix + ".csv"
+    msa.summary(di_msa_opt, di_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
     
+    msas_entropy=[]
+    df_c = pandas.read_csv(di_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol', 'red'])
+    df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
+    msa.seq_to_logo(di_msa_opt, 'DI Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_frob"],ascending=False)
     top_auc_mi=curated_result_df.iloc[0]
@@ -501,6 +545,23 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[3,'nsus']=nsus 
     best_01_coev_values.at[3,'runs']=runs 
     
+    #conservation
+    frob_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
+    frob_msa_conservation= conservation_path + sufix + ".csv"
+    msa.summary(frob_msa_opt, frob_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
+    
+    msas_entropy=[]
+    df_c = pandas.read_csv(frob_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol', 'red'])
+    df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
+    msa.seq_to_logo(frob_msa_opt, 'FROB Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
+    
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_psicov"],ascending=False)
     top_auc_mi=curated_result_df.iloc[0]
@@ -528,6 +589,51 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_01_coev_values.at[4,'beta']=beta 
     best_01_coev_values.at[4,'nsus']=nsus 
     best_01_coev_values.at[4,'runs']=runs 
+    
+    #conservation
+    psicov_msa_opt= curated_sequences_path + sufix + ".fasta.cluster"
+    psicov_msa_conservation= conservation_path + sufix + ".csv"
+    msa.summary(psicov_msa_opt, psicov_msa_conservation, 'Conservation ' + sufix + ".fasta.cluster")
+    
+    msas_entropy=[]
+    df_c = pandas.read_csv(psicov_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol', 'red'])
+    df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, conservation_path + sufix + ".png", 'Conservation Natural MSA and Evol MSA')
+    
+    msa.seq_to_logo(psicov_msa_opt, 'PSICOV Best MSA. Beta ' + beta + ' Nsus ' + nsus + ' Runs '+runs)
+    
+    #PLOT TODO JUNTO
+    
+    msas_entropy=[]
+    df_c = pandas.read_csv(mi_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol Best MI and FROB (Beta=5 Nsus=20)', 'green'])
+    
+    df_c = pandas.read_csv(di_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol Best DI (Beta=0.5 Nsus=5)', 'yellow'])
+    
+    df_c = pandas.read_csv(psicov_msa_conservation, usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol Best PSICOV (Beta=7 Nsus=20)', 'red'])
+    
+    
+    df_c = pandas.read_csv(natural_result_path + "conservation.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, conservation_path +  "conservation.png", 'Conservation Natural MSA and Evol MSA')
+    
+    
     
     target, scores = msa_analysis.getTargetScores(mi_path, contact_map_sync, constants.neighbour_window)
     auc, auc01 = util.getAUC(target, scores)
@@ -594,11 +700,6 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     targets.append(target_psicov)
     
     plot.roc_curve_(targets, sc, labels, 'Best AUC_01 ROC curves for coevolution methods' ,colors, '',curated_sequences_path + 'best_rocs_auc_01.png')
-    
-    #TODO Conservation MSA
-    #conservation_msa
-    
-    #
     
     #top_rank_result = top_rank(zmip_natural,m2,1,contact_map,mi_result_file_path+'top_1percent_withcon'+contact_threashold_str+'.png',mi_result_file_path,result_file,top_df,2, pdb_name,contact_threashold)
     natural_mi_result_path = natural_result_path + "mi.csv"
@@ -686,10 +787,13 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     msa_analysis.coevolution_analisys('FROB',coevolution_analisys_df, 1, frob_natural, frob_evol, curated_sequences_path_best_results, contact_map_sync,  constants.neighbour_window, pdb_name)
     msa_analysis.coevolution_analisys('PSICOV',coevolution_analisys_df, 1, psicov_natural, psicov_evol, curated_sequences_path_best_results, contact_map_sync,  constants.neighbour_window, pdb_name)
     
-    coevolution_analisys_df.to_csv(curated_sequences_path_best_results +'tops_contact_threashold_1csv')
+    coevolution_analisys_df.to_csv(curated_sequences_path_best_results +'tops_contact_threashold_1.csv')
     
     #msa_analysis.top_coevolution(natural_coevolution,evolutionated_coevolution,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1)
-
+    
+    
+    
+    
 def optimize_evolution_conformers(execution_folder,structures,protein, chain):
     for pdb_name in structures:
         execution_folder_conf = execution_folder + pdb_name + "/"
@@ -761,41 +865,45 @@ def analyse_top_coevolution_conformers(execution_folder,structures,sum_contact_m
     
     coevolution_analisys_df = pandas.DataFrame()
     index=1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,0.5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)
+    
+    corr_df = pandas.DataFrame()
+    
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,0.5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
-    msa_analysis.top_coevolution_analysis('di', di_coev,0.5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)     
+    msa_analysis.top_coevolution_analysis('di', di_coev,0.5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)     
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,0.5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)            
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,0.5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)            
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,0.5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)            
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,0.5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)            
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
     index=index*3 +1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,1, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,1, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,1, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,1, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,1, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,1, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,1, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,1, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)  
     index=index*3 + 1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)   
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)              
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)  
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,2, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,2, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)   
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,2, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)              
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,2, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)  
     index=index*3 +1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,3, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,3, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,3, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,3, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)              
     index=index*3 +1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,4, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,4, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,4, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,4, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,4, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,4, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,4, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,4, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)              
     index=index*3 + 1
-    msa_analysis.top_coevolution_analysis('mi', mi_coev,5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index)  
-    msa_analysis.top_coevolution_analysis('di', di_coev,5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index)       
-    msa_analysis.top_coevolution_analysis('frob', frob_coev,5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index)             
-    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index)              
+    msa_analysis.top_coevolution_analysis('mi', mi_coev,5, sum_contact_map_path, structures,coevolution_results,mi_natural,coevolution_analisys_df,index,corr_df)  
+    msa_analysis.top_coevolution_analysis('di', di_coev,5, sum_contact_map_path, structures,coevolution_results ,di_natural,coevolution_analisys_df,index,corr_df)       
+    msa_analysis.top_coevolution_analysis('frob', frob_coev,5, sum_contact_map_path, structures,coevolution_results,frob_natural,coevolution_analisys_df,index,corr_df)             
+    msa_analysis.top_coevolution_analysis('psicov', psicov_coev,5, sum_contact_map_path, structures,coevolution_results,psicov_natural,coevolution_analisys_df,index,corr_df)              
 
     coevolution_analisys_df.to_csv(coevolution_results +'top_thio_ecoli_conformers.csv')
+    corr_df.to_csv(coevolution_results +'top_thio_ecoli_conformers_corr.csv')
    
 def generate_combined_msa(execution_folder,structures,num):
     mi_msa=[]

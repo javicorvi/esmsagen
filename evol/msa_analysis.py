@@ -24,17 +24,30 @@ def coevolution_analisys(method, top_df,index, zmip_natural, zmip_evol, outputh_
     #util.save_list_to_csv(zmip_natural_result_path+"_order.csv", zmip_natural, ['Position 1',' Position 2','ZMIP'])
     contact_map=util.load_contact_map(contact_map_path)
     #Agrego los numeros de contactos de la matriz
-    contacts_count = np.count_nonzero(contact_map>=contact_threashold)
+    contacts_count = float(np.count_nonzero(contact_map>=contact_threashold))
     #df.set_value(index, 'contact_threashold', contact_threashold)
     #df.set_value(index, 'contacts_count', contacts_count)
     #sincronizo las senales de coevolucion para calcular spearman rank correlation
     m,m2=util.sincronice_mi(zmip_natural, zmip_evol)
+    util.order(m)
+    util.order(m2)
     m_=[row [2] for row in m]
     m2_=[row[2] for row in m2]
     
+    
     #Agrego spearman entre natural y evolucionado
-    value_spearman = spearman(m_,m2_)
-    #df.set_value(index, 'spearman_evol_nat', value_spearman) 
+    
+    '''m_pairs = [(row[0],row[1]) for row in m]
+    m2_pairs = [(row[0],row[1]) for row in m2] 
+    print m_pairs
+    print m2_pairs
+    df_c = pandas.DataFrame()
+    df_c['pair']=m_pairs
+    df_c['pair2']=m2_pairs
+    correlation_s = df_c['pair'].corr(df_c['pair2'], method='spearman')
+    '''
+    # value_spearman = spearman(m_pairs,m2_pairs)
+    #top_df.set_value(index, method+'_spearman_evol_nat', value_spearman) 
     #0.100578206022
     #0.102156238538
     
@@ -72,13 +85,13 @@ def coevolution_analisys(method, top_df,index, zmip_natural, zmip_evol, outputh_
             
     result_file = open(outputh_path+method+'.txt','w')
     result_file.write(outputh_path+method+ '\n')
-    result_file.write(" SPEARMAN RANK CORRELATION " + str(value_spearman)+ '\n')
-    top_coevolution(zmip_natural,zmip_evol,method,0.5,contact_map,outputh_path+method+'top_0.5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,1, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,1,contact_map,outputh_path+method+'top_1percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,2, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,2,contact_map,outputh_path+method+'top_2percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,3, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,3,contact_map,outputh_path+method+'top_3percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,4, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,4,contact_map,outputh_path+method+'top_4percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,5, pdb_name,contact_threashold)
-    top_coevolution(zmip_natural,zmip_evol,method,5,contact_map,outputh_path+method+'top_5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,6, pdb_name,contact_threashold)
+    #result_file.write(" SPEARMAN RANK CORRELATION " + str(value_spearman)+ '\n')
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,0.5,contact_map,outputh_path+method+'top_0.5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,1, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,1,contact_map,outputh_path+method+'top_1percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,2, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,2,contact_map,outputh_path+method+'top_2percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,3, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,3,contact_map,outputh_path+method+'top_3percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,4, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,4,contact_map,outputh_path+method+'top_4percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,5, pdb_name,contact_threashold)
+    top_coevolution(zmip_natural,zmip_evol,contacts_count,method,5,contact_map,outputh_path+method+'top_5percent_withcon'+contact_threashold_str+'.png',outputh_path,result_file,top_df,6, pdb_name,contact_threashold)
     
     #top_rank(zmip_natural,m2,3,contact_map,mi_result_file_path+'top_3percent_withcon.png',mi_result_file_path,result_file)
     #top_rank(zmip_natural,m2,4,contact_map,mi_result_file_path+'top_4percent_withcon.png',mi_result_file_path,result_file)
@@ -93,7 +106,7 @@ Plots information about the top_rank.
 For example give information about the top_rank matches
 Plot a matrix with the contact and the high values (top_rank) of the evolution and the natural msa
 '''
-def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1):
+def top_coevolution(natural_coevolution,evolutionated_coevolution,contacts_count,method,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1):
     num = len(natural_coevolution)*top//100
     a=natural_coevolution[0:int(num)]
     b=evolutionated_coevolution[0:int(num)]
@@ -139,8 +152,10 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
     result_file.write("MATCH POSITIONS  : " + str(data) + '\n')
     
     top_df.set_value(index,'nat_'+method,str(nat_contact*100/num))
+    top_df.set_value(index,'nat_from_total_'+method,str(nat_contact*100/contacts_count))
     top_df.set_value(index,'evol_'+method,str(evol_contact*100/num))
-    
+    top_df.set_value(index,'evol_from_total_'+method,str(evol_contact*100/contacts_count))
+    top_df.set_value(index,'pairs_'+method,num)
     data_contact=[]
     for d in data:
         pos1 = int(d[0]-1)
@@ -148,20 +163,15 @@ def top_coevolution(natural_coevolution,evolutionated_coevolution,method,top,con
         v=contact_map[pos1][pos2]
         if(v >= contact_threashold):
             data_contact.append(d)
-    result_file.write("MATCH POSITIONS CONTACTS BETWEEN NAT AND EVOL (NO WINDOW) : " + str(len(data_contact))+ '\n')
-    top_df.set_value(index,'match_'+method,str(len(data_contact)))
-    result_file.write("MATCH POSITIONS CONTACTS  : " + str(data_contact) + '\n')
+    result_file.write("MATCH POSITIONS CONTACTS BETWEEN NAT AND EVOL (NO WINDOW) %: " + str(len(data_contact)*100/num)+ '\n')
+    top_df.set_value(index,'match_'+method,str(len(data_contact)*100/num ))
+    top_df.set_value(index,'nc_match_'+method,str(len(data)*100/num ))
+    result_file.write("MATCH POSITIONS CONTACTS % : " + str(len(data_contact)*100/num ) + '\n')
     result_file.write("************************************************************************" + '\n')
-    
-    
-    print "TOP : "  + str(top) + "% PAR POSITIONS : " + str(num)
-    print "MATCH POSITIONS BETWEEN NAT AND EVOL (NO WINDOW) : " + str(len(data))
-    print "NATURAL CONTACTS QUANTITY : " + str(nat_contact) + " - %"+ str(nat_contact*100/num)
-    print "EVOL CONTACTS QUANTITY : " + str(evol_contact) + " - %"+ str(evol_contact*100/num)
     #print data
-    return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data),len(data_contact)
+    return nat_contact, nat_contact*100/num, evol_contact, evol_contact*100/num, len(data)*100/num,len(data_contact)*100/num
 
-def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df,index_df):
+def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_map_path, structures,coevolution_results, natural_coevolution,coevolution_analisys_df,index_df,df_corr=None):
     contact_map = util.load_contact_map(contact_map_path)
     fields=["Position1","Position2","Count"]
     df_total = pandas.DataFrame([],columns=fields)
@@ -215,6 +225,15 @@ def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_m
     sorted_df=sorted_df.sort_values(by=['Count','Contacts'],ascending=[False,False])
     sorted_df.to_csv(coevolution_results + method + "_" + str(top_score) + "_coevolution.csv", sep='\t', encoding='utf-8')
     
+    correlation_p = sorted_df['Count'].corr(sorted_df['Contacts'], method='pearson')
+    correlation_k = sorted_df['Count'].corr(sorted_df['Contacts'], method='kendall')
+    correlation_s = sorted_df['Count'].corr(sorted_df['Contacts'], method='spearman')
+    
+    df_corr.set_value(index_df, 'top', top_score)
+    df_corr.set_value(index_df, method+'_pearson', round(correlation_p, 4))
+    df_corr.set_value(index_df, method+'_kendall', round(correlation_k, 4))
+    df_corr.set_value(index_df, method+'_spearman', round(correlation_s, 4))
+        
     
     
     df = pandas.read_csv(coevolution_results + method + "_" + str(top_score) + "_coevolution.csv",delim_whitespace=True,header=0,usecols=[0,1,2,4])
@@ -240,21 +259,24 @@ def top_coevolution_analysis(method, score_coev_conformers, top_score, contact_m
     
     
     #Review how to show the conjunction of top SCORES
-    result_file = open(coevolution_results+method+'.txt','w')
+    result_file = open(coevolution_results+ str(top_score)+ "_"+method+".txt",'w')
     result_file.write(coevolution_results+method+ '\n')
     
     
     coevolution_analisys_df.set_value(index_df,'top',str(top_score))
     coevolution_analisys_df.set_value(index_df,'contact_threashold',1)
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_1.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',1)
+    contacts_count = float(np.count_nonzero(contact_map>=1))
+    top_coevolution(natural_coevolution,top_score_list,contacts_count,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_1.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',1)
     index_df=index_df + 1
     coevolution_analisys_df.set_value(index_df,'top',str(top_score))
     coevolution_analisys_df.set_value(index_df,'contact_threashold',4)
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_4.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',4)
+    contacts_count = float(np.count_nonzero(contact_map>=4))
+    top_coevolution(natural_coevolution,top_score_list,contacts_count,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_4.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',4)
     index_df=index_df + 1
     coevolution_analisys_df.set_value(index_df,'top',str(top_score))
+    contacts_count = float(np.count_nonzero(contact_map>=8))
     coevolution_analisys_df.set_value(index_df,'contact_threashold',8)
-    top_coevolution(natural_coevolution,top_score_list,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_8.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',8)
+    top_coevolution(natural_coevolution,top_score_list,contacts_count,method,top_score,contact_map,coevolution_results+ method+"_top_"+ str(top_score)+ 'percent_contact_threashold_8.png',coevolution_results,result_file, coevolution_analisys_df,index_df,'Thio Ecoli Conformers',8)
     
     result_file.close()
     
@@ -319,6 +341,16 @@ def dendogram_top_mi(top, zmip_nat,zmip_paths, output_path,title ,structures, cl
         Y.append(cmap_with_mi)
     Z = linkage(Y, clustering_type)
     plot.dendogram_matrix(Z,output_path,title,structures)        
+
+def plot_comparation_top(top_result, execution_folder):
+    top_df = pandas.read_csv(top_result, header=0)
+    df_1 = top_df.loc[top_df['contact_threashold'] == 1]
+    plot.top_comparation(df_1, '>= 1', execution_folder + 'top_comparation_contact_1.png')
+    df_4 = top_df.loc[top_df['contact_threashold'] == 4]
+    plot.top_comparation(df_4, '>= 4', execution_folder + 'top_comparation_contact_4.png')
+    df_8 = top_df.loc[top_df['contact_threashold'] == 8]
+    plot.top_comparation(df_8, '= 8', execution_folder + 'top_comparation_contact_8.png')
+
     
 def plot_optimization(optimization_results):
     df = pandas.read_csv(optimization_results, header=0, usecols=['auc_mi','auc_di','auc_frob','auc_psicov', 'beta', 'nsus', 'run'])

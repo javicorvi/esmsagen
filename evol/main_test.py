@@ -46,8 +46,9 @@ def analyse_optimus_msa():
     natural_result_path = execution_folder + "/natural/"
     #natural_information()  
     evol.analyse_optimus_msa(execution_folder,'2TRX',natural_result_path)
-    
+
 analyse_optimus_msa()
+
 
 def evol_thio_ecoli_conformers():
     chain_name = "A"
