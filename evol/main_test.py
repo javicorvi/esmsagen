@@ -7,7 +7,7 @@ import util
 import plot
 import evol
 import constants
-
+import msa
 '''
 2TRX evolution
 '''
@@ -47,7 +47,7 @@ def analyse_optimus_msa():
     #natural_information()  
     evol.analyse_optimus_msa(execution_folder,'2TRX',natural_result_path)
     
-#analyze_optimus_msa()
+analyse_optimus_msa()
 
 def evol_thio_ecoli_conformers():
     chain_name = "A"
@@ -95,17 +95,20 @@ def plot_comparation_top():
 def conjunction_analisys():
     execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
     structures = [ '1XOA', '1XOB', '2H74','1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17','2TRX']
-    num=3000
-    evol.generate_combined_msa(execution_folder, structures, num)
-
-        
+    contact_map_path = execution_folder + 'sum_contact_map.dat'
+    natural_result_path = constants.data_path + "THIO_ECOLI_4_107_2TRX_A/natural/"
+    evol.conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path)
+    #evol.analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder, structures,num)
     
-    evol.analisys_msa_conjuntion_thio_ecoli_conformeros(execution_folder, structures,num)
-
-    evol.analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder, structures,num)
-    
-conjunction_analisys()    
+#conjunction_analisys()    
 # conjunction_analisys(3000)
 # conjunction_analisys(5000)
 # conjunction_analisys(10000)
+
+
+def conservation_conformeros():
+    execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
+    structures = [ '1XOA', '1XOB', '1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17']
+    msas = [execution_folder + pdb + '/optimization/curated_sequences/sequences-beta5.0-nsus20.0-runs20000.fasta' for pdb in structures]
+    msa.seq_to_logo(msas,structures):
     

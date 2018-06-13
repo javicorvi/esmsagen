@@ -32,8 +32,8 @@ def contacts_with_mi(x_nat_t,y_evol_t,x_nat_f,y_evol_f,output_path,filename,pdb_
            ncol=3,
            fontsize=8)
     #plt.set_title(filename)
-    plt.ylabel('Natural Values')
-    plt.xlabel('Evolution Values')
+    plt.ylabel('Natural Covariation Values')
+    plt.xlabel('Evolution Covariation Values')
     plt.title(pdb_name)
     
     
