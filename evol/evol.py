@@ -962,29 +962,33 @@ def generate_combined_msa(execution_folder,structures,num):
     msa.create_msa_bootstrap(psicov_msa_noid, msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta', num)
     
 
-def conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path):
+def conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path,contact_threashold):
     num_=[20000]
     df = pandas.DataFrame()
     for num in num_:
-        generate_combined_msa(execution_folder, structures, num)
-        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path)
+        #generate_combined_msa(execution_folder, structures, num)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,contact_threashold)
         
         
-def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structures,num, contact_map_path,natural_result_path):
+def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structures,num, contact_map_path,natural_result_path, contact_threashold=1):
     bootstraping_folder = execution_folder + 'msa_bootstraping/'
     msa_conjuntion_bootstrap_path = bootstraping_folder + 'msa_conjuntion_' + str(num) + '/'
+    '''
     msa.buslje09(msa_conjuntion_bootstrap_path + 'mi_msa_bootstrap_' + str(num) + '.fasta', msa_conjuntion_bootstrap_path + 'mi_msa_bootstrap_' + str(num) + '.csv')
     msa.gaussDcaFrobenius(msa_conjuntion_bootstrap_path + 'frob_msa_bootstrap_' + str(num) + '.fasta', msa_conjuntion_bootstrap_path + 'frob_msa_bootstrap_' + str(num) + '.csv')
     msa.gaussDcaDirectInformation(msa_conjuntion_bootstrap_path + 'di_msa_bootstrap_' + str(num) + '.fasta', msa_conjuntion_bootstrap_path + 'di_msa_bootstrap_' + str(num) + '.csv')
     msa.create_msa_without_id(msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta', msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta'+"_noid.aln")
     msa.psicov(msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta'+"_noid.aln",msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.csv')
-    target, scores = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'mi_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window)
+    '''
+    
+    
+    target, scores = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'mi_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, threshold=contact_threashold)
     auc, auc01 = util.getAUC(target, scores)
-    target_di, scores_di = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'di_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ')
+    target_di, scores_di = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'di_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ', threshold=contact_threashold)
     auc_di, auc01_di = util.getAUC(target_di, scores_di)
-    target_frob, scores_frob = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'frob_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ')
+    target_frob, scores_frob = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'frob_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ', threshold=contact_threashold)
     auc_frob, auc01_frob = util.getAUC(target_frob, scores_frob)
-    target_psicov, scores_psicov = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ',score_position=4)
+    target_psicov, scores_psicov = msa_analysis.getTargetScores(msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.csv', contact_map_path, constants.neighbour_window, split_char=' ',score_position=4, threshold=contact_threashold)
     auc_psicov, auc01_psicov = util.getAUC(target_psicov, scores_psicov)
     
     index = len(df.index) + 1
@@ -997,7 +1001,7 @@ def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structure
     df.at[index,'auc_frob']=auc_frob
     df.at[index,'auc_psicov_01']=auc01_psicov
     df.at[index,'auc_psicov']=auc_psicov
-    df.to_csv(msa_conjuntion_bootstrap_path + 'result_conjunction.csv')
+    df.to_csv(msa_conjuntion_bootstrap_path + 'result_conjunction_contact_threashold_'+str(contact_threashold)+'.csv')
     
     #Plot optimos AUC_01
     colors = ['green','blue','yellow','red']
@@ -1013,7 +1017,9 @@ def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structure
     sc.append(scores_psicov)
     targets.append(target_psicov)
     
-    plot.roc_curve_(targets, sc, labels, 'Bootstrap ' + str(num) +  'MSA Conjunction ROCs ' ,colors, '',msa_conjuntion_bootstrap_path + 'rocs_auc.png')
+    plot.roc_curve_(targets, sc, labels, 'Bootstrap ' + str(num) +  'MSA Conjunction ROCs ' ,colors, '',msa_conjuntion_bootstrap_path + 'rocs_auc_contact_threashold_'+str(contact_threashold)+'.png')
+    
+
     
     natural_mi_result_path = natural_result_path + "mi.csv"
     natural_frob_result_path = natural_result_path + "frob.csv"
@@ -1047,12 +1053,13 @@ def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structure
     coevolution_analisys_df.set_value(4,'top',3)
     coevolution_analisys_df.set_value(5,'top',4)
     coevolution_analisys_df.set_value(6,'top',5)
-    msa_analysis.coevolution_analisys('MI',coevolution_analisys_df, 1, mi_natural, mi_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA')
-    msa_analysis.coevolution_analisys('DI',coevolution_analisys_df, 1, di_natural, di_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA')
-    msa_analysis.coevolution_analisys('FROB',coevolution_analisys_df, 1, frob_natural, frob_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA')
-    msa_analysis.coevolution_analisys('PSICOV',coevolution_analisys_df, 1, psicov_natural, psicov_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA')
+    msa_analysis.coevolution_analisys('MI',coevolution_analisys_df, 1, mi_natural, mi_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA', contact_threashold)
+    msa_analysis.coevolution_analisys('DI',coevolution_analisys_df, 1, di_natural, di_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA', contact_threashold)
+    msa_analysis.coevolution_analisys('FROB',coevolution_analisys_df, 1, frob_natural, frob_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA', contact_threashold)
+    msa_analysis.coevolution_analisys('PSICOV',coevolution_analisys_df, 1, psicov_natural, psicov_evol, msa_conjuntion_bootstrap_path, contact_map_path,  constants.neighbour_window, 'Conjuntion MSA', contact_threashold)
     
-    coevolution_analisys_df.to_csv(msa_conjuntion_bootstrap_path +'tops_contact_threashold_1.csv')
+    coevolution_analisys_df.to_csv(msa_conjuntion_bootstrap_path +'tops_contact_threashold_'+str(contact_threashold)+'.csv')
+    
     
     
  
