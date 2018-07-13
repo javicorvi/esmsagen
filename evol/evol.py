@@ -90,7 +90,7 @@ input_families_folder = "../FAMILY_PF00085/"
 Main method for optimize the evolution of the structure, returns the optimization information.
 Run the evolution with diferents parameters.
 '''          
-def optimize_evolution(execution_folder, protein, pdb_name, chain, synchronized=False):
+def optimize_evolution(execution_folder, protein, pdb_name, chain, synchronized=False, pdb_path_=None):
     logging.info('Run Optimization For ' + pdb_name)
     start_time_total = time.time()
     columns = ["protein", "pdb", "chain", "beta", "nsus", "run", "auc_mi", "auc_01_mi", "auc_di", "auc_01_di", "auc_frob", "auc_01_frob","auc_psicov","auc_01_psicov","execution_time", "start_residue", "end_residue","message"]
@@ -112,9 +112,15 @@ def optimize_evolution(execution_folder, protein, pdb_name, chain, synchronized=
         
     contact_map = optimization_folder + "contact_map.dat"
     contact_map_sync = optimization_folder + "contact_map_sync.dat" 
-    pdb_path = execution_folder + pdb_name + ".pdb"
-    pdb_clean_path = execution_folder +  pdb_name + "_chain_" + chain +".pdb"
+    if(pdb_path_==None):
+        pdb_path = execution_folder + pdb_name + ".pdb"
+        pdb_clean_path = execution_folder +  pdb_name + "_chain_" + chain +".pdb"
+    else:
+        pdb_clean_path = pdb_path_
     #create all the structure for the optimization
+    
+    if not os.path.exists(optimization_folder):
+        os.makedirs(optimization_folder)
     if not os.path.exists(scpe_sequences):
         os.makedirs(scpe_sequences)
     if not os.path.exists(clustered_sequences_path):
@@ -133,9 +139,9 @@ def optimize_evolution(execution_folder, protein, pdb_name, chain, synchronized=
     #pdb.download(pdb_name, pdb_path)
     #pdb.clean_pdb(pdb_path, pdb_clean_path, chain)
     
-    beta = ["0.001","0.01","0.1","0.5", "1.0", "2.0", "3.0", "5.0", "7.0", "10.0", "15.0", "20.0"]
-    runs = ["1000", "5000", "10000", "20000"]
-    nsus = ["1.0", "2.0", "3.0", "5.0", "7.0", "10.0", "15.0","20.0"]
+    beta = ["7.0"]
+    runs = ["20000"]
+    nsus = ["20.0"]
     index = 1
     for b in beta:
         for sus in nsus:
@@ -791,8 +797,140 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     
     #msa_analysis.top_coevolution(natural_coevolution,evolutionated_coevolution,top,contact_map,contact_map_top_coev_path,filename,result_file, top_df,index,pdb_name,contact_threashold=1)
     
+def evol_families(families, input_families_folder):
+    logging.info('Begin of the execution process')
+    start_time = time.time()
+    for family in families:
+        evol_family(family, input_families_folder)
+    logging.info('End of the execution process')
+    logging.info('Time of Execution --- %s seconds ---' % (time.time() - start_time))    
+
+def analisys_families(families, input_families_folder):
+    logging.info('Begin of the execution process')
+    start_time = time.time()
+    for family in families:
+        analisys_family(family, input_families_folder)
+    logging.info('End of the execution process')
+    logging.info('Time of Execution --- %s seconds ---' % (time.time() - start_time))      
+
+def analisys_family(family, execution_folder):
+    family_path = execution_folder + family
+    pdb_paths_files =  family_path + "/PDB/"
+    
+    family_pdb_evol_info_path = family_path + "/PF00085" + "_evol_info.csv"
+    pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
+    df_new = pandas.DataFrame()
+    for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
+        if(pdb_protein_to_evolve['status'] == 'okey_evol_nuevo'):
+            pdb_name = pdb_protein_to_evolve['pdb']
+            file_name_pdb = pdb_protein_to_evolve['seq'].replace("/", "_").replace("-", "_") + "_" + pdb_protein_to_evolve['pdb'] + "_" + pdb_protein_to_evolve['chain']
+            complete_file_name_pdb = pdb_paths_files + "/" + file_name_pdb
+            logging.info('Begin of the PDB ' + file_name_pdb)
+            result_opt = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/optimization.csv"
+            df_result = pandas.read_csv(result_opt)
+            df_new=df_new.append(df_result)
+            
+            
+    df_new.to_csv("/home/jcorvi/result_family.csv")
+    
+def evol_family(family, execution_folder):
+    # todo manejar errores
+    msa_gz_path = glob.glob(execution_folder + family + "/*.final.gz")
+    if(len(msa_gz_path) == 0):
+        logging.error('No existe alineamiento de la familia ' + family)
+        return
+    if(len(msa_gz_path) > 1):
+        logging.error('Existe mas de un alineamiento de la familia ' + family)
+        return
+    msa_gz_path=msa_gz_path[0]
+    """
+    msa_file_name_fasta = aux_path[0] + "/" + aux_path[1] + "/" + aux_path[2] + "/" + aux_path[2] + ".fasta"    
+    zmip_natural_path = msa_file_name_fasta + "_zmip.dat" 
+    """
+    with gzip.open(msa_gz_path, 'rb') as f:
+        aux_path = f.filename.split('/')
+        msa_filename = os.path.basename(f.filename)
+        msa_complete_filename_stock = aux_path[0] + "/" + aux_path[1] + "/" + aux_path[2] + "/" + msa_filename[:-3]
+        msa_file = open(msa_complete_filename_stock , "w")
+        file_content = f.read()
+        msa_file.write(file_content)
+        msa_file.flush()
+        msa_file.close()
+        
+    '''msa.convertMSAToFasta(msa_complete_filename_stock, msa_file_name_fasta)'''
     
     
+    
+        
+    
+    family_path = execution_folder + family
+    family_pdb_information = family_path + "/PF00085" + "_pdb_level.csv" 
+    family_pdb_evol_info_path = family_path + "/PF00085" + "_evol_info.csv"
+    if(not os.path.isfile(family_pdb_evol_info_path)):
+        pdb_to_evol_df = util.find_pdb_to_evolve(family_pdb_information)
+        pdb_to_evol_df.to_csv(family_pdb_evol_info_path)
+    else:
+        pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
+        
+    if(execute_download_pdbs):
+        pdb.download_pdbs_family(execution_folder, family_path, pdb_to_evol_df)
+        
+    pdb_paths_files =  family_path + "/PDB/"
+    #family_evol(input_families_folder, family_folder, pdb_to_evol_df, family_pdb_evol_info_path)
+    #pdb_to_evol_df.to_csv(family_pdb_evol_info_path)
+    sufix = "_superimposed.pdb.gz"
+    for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
+            pdb_name = pdb_protein_to_evolve['pdb']
+            file_name_pdb = pdb_protein_to_evolve['seq'].replace("/", "_").replace("-", "_") + "_" + pdb_protein_to_evolve['pdb'] + "_" + pdb_protein_to_evolve['chain'] + sufix
+            complete_file_name_pdb = pdb_paths_files + "/" + file_name_pdb
+            logging.info('Begin of the PDB ' + file_name_pdb)
+            pdb_file_complete = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/" + pdb_protein_to_evolve['pdb_folder_name'] + "_complete.pdb"
+            pdb_file_complete_filename_to_evolve = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/" + pdb_protein_to_evolve['pdb_folder_name'] + "_clean.pdb"
+            # util.remove_header(pdb_file_complete_filename_to_evolve)
+            protein = pdb_protein_to_evolve['seq']
+            
+            # for pdb_gz in glob.glob(pdb_paths_files):
+            # aca arrancar otro try
+            # unzip pdb and move to pdb folder
+            try:
+                with gzip.open(complete_file_name_pdb, 'rb') as f:
+                    pdb_file_name = os.path.basename(f.filename[:-3])
+                    pdb_folder = pdb_paths_files + "/" + pdb_file_name[:-17]
+                    if not os.path.exists(pdb_folder):
+                        os.makedirs(pdb_folder)
+                    cutted_pdb_path = pdb_folder + "/" + pdb_file_name    
+                    pdb_file = open(cutted_pdb_path , "w")
+                    file_content = f.read()
+                    pdb_file.write(file_content)
+                    pdb_file.close()
+                # chain name to evol
+                chain_name = pdb_file_name[-18:-17]
+                
+                #cd_secuence = util.getSequence(msa_file_name_fasta, "CRBB1_HUMAN/150-232")
+                # start_residue = int(pdb_protein_to_evolve['seq'][pdb_protein_to_evolve['seq'].index("/")+1:pdb_protein_to_evolve['seq'].index("-")]) 
+                # end_residue = int(pdb_protein_to_evolve['seq'][pdb_protein_to_evolve['seq'].index("-")+1:]) 
+                if(pdb_protein_to_evolve['status'] != 'okey_evol_nuevo'):
+                    #residue_position, residue_name = util.getPDBSequence(pdb_name, pdb_file_complete, chain_name)
+                    start_residue, end_residue = util.find_pdb_start_end_for_protein(msa_complete_filename_stock, pdb_protein_to_evolve['seq'], pdb_name, chain_name)
+                    # pdb_to_evol_df.set_value(index,"start_residue",start_residue)
+                    # pdb_to_evol_df.set_value(index,"end_residue",end_residue)
+                        
+                    pdb.clean_pdb(pdb_file_complete, pdb_file_complete_filename_to_evolve, chain_name, start_residue, end_residue)   
+                    
+                    optimize_evolution(pdb_folder+"/", protein, pdb_name, chain_name, synchronized=False, pdb_path_=pdb_file_complete_filename_to_evolve)
+                
+                
+                pdb_to_evol_df.set_value(index, "status", "okey_evol_nuevo")
+                logging.info('End of the PDB ' + file_name_pdb)
+            except Exception as inst:
+                print inst
+                x = inst.args
+                print x
+                logging.error('The PDB was not evolutionated ' + file_name_pdb)
+                logging.error(inst)
+                pdb_to_evol_df.set_value(index, "status", "error")
+            pdb_to_evol_df.to_csv(family_pdb_evol_info_path)        
+
     
 def optimize_evolution_conformers(execution_folder,structures,protein, chain):
     for pdb_name in structures:
@@ -962,13 +1100,24 @@ def generate_combined_msa(execution_folder,structures,num):
     msa.create_msa_bootstrap(psicov_msa_noid, msa_conjuntion_bootstrap_path + 'psicov_msa_bootstrap_' + str(num) + '.fasta', num)
     
 
-def conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path,contact_threashold):
-    num_=[20000]
-    df = pandas.DataFrame()
+def conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path):
+    num_=[15000]
     for num in num_:
+        df = pandas.DataFrame()
         #generate_combined_msa(execution_folder, structures, num)
-        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,contact_threashold)
-        
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,1)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,2)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,3)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,4)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,5)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,6)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,7)
+        analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder, structures,num,contact_map_path,natural_result_path,8)
+        bootstraping_folder = execution_folder + 'msa_bootstraping/'
+        msa_conjuntion_bootstrap_path = bootstraping_folder + 'msa_conjuntion_' + str(num) + '/'
+        df.to_csv(msa_conjuntion_bootstrap_path + 'result_conjunction.csv')   
+     
+     
         
 def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structures,num, contact_map_path,natural_result_path, contact_threashold=1):
     bootstraping_folder = execution_folder + 'msa_bootstraping/'
@@ -993,15 +1142,16 @@ def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structure
     
     index = len(df.index) + 1
     df.at[index,'num']=num
-    df.at[index,'auc_mi_01']=auc01
-    df.at[index,'auc_mi']=auc
-    df.at[index,'auc_di_01']=auc01_di
-    df.at[index,'auc_di']=auc_di
-    df.at[index,'auc_frob_01']=auc01_frob
-    df.at[index,'auc_frob']=auc_frob
-    df.at[index,'auc_psicov_01']=auc01_psicov
-    df.at[index,'auc_psicov']=auc_psicov
-    df.to_csv(msa_conjuntion_bootstrap_path + 'result_conjunction_contact_threashold_'+str(contact_threashold)+'.csv')
+    df.at[index,'contact_threashold']=contact_threashold
+    df.at[index,'auc_mi_01']=round(auc01,6)
+    df.at[index,'auc_mi']=round(auc,6)
+    df.at[index,'auc_di_01']=round(auc01_di,6)
+    df.at[index,'auc_di']=round(auc_di,6)
+    df.at[index,'auc_frob_01']=round(auc01_frob,6)
+    df.at[index,'auc_frob']=round(auc_frob,6)
+    df.at[index,'auc_psicov_01']=round(auc01_psicov,6)
+    df.at[index,'auc_psicov']=round(auc_psicov,6)
+    #df.to_csv(msa_conjuntion_bootstrap_path + 'result_conjunction_contact_threashold_'+str(contact_threashold)+'.csv')
     
     #Plot optimos AUC_01
     colors = ['green','blue','yellow','red']
@@ -1017,7 +1167,7 @@ def analisys_msa_conjuntion_thio_ecoli_conformeros(df,execution_folder,structure
     sc.append(scores_psicov)
     targets.append(target_psicov)
     
-    plot.roc_curve_(targets, sc, labels, 'Bootstrap ' + str(num) +  'MSA Conjunction ROCs ' ,colors, '',msa_conjuntion_bootstrap_path + 'rocs_auc_contact_threashold_'+str(contact_threashold)+'.png')
+    plot.roc_curve_(targets, sc, labels, 'Bootstrap ' + str(num) +  ' MSA Conjunction ROCs ' ,colors, '',msa_conjuntion_bootstrap_path + 'rocs_auc_contact_threashold_'+str(contact_threashold)+'.png')
     
 
     

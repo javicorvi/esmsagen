@@ -47,7 +47,7 @@ def analyse_optimus_msa():
     #natural_information()  
     evol.analyse_optimus_msa(execution_folder,'2TRX',natural_result_path)
 
-analyse_optimus_msa()
+#analyse_optimus_msa()
 
 
 def evol_thio_ecoli_conformers():
@@ -99,6 +99,7 @@ def conjunction_analisys():
     contact_map_path = execution_folder + 'sum_contact_map.dat'
     natural_result_path = constants.data_path + "THIO_ECOLI_4_107_2TRX_A/natural/"
     evol.conjunction_analysis(execution_folder, structures,contact_map_path,natural_result_path)
+    
     #evol.analisys_singular_conjunction_thio_ecoli_conformeros(execution_folder, structures,num)
     
 #conjunction_analisys()    
@@ -109,7 +110,52 @@ def conjunction_analisys():
 
 def conservation_conformeros():
     execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
-    structures = [ '1XOA', '1XOB', '1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17']
-    msas = [execution_folder + pdb + '/optimization/curated_sequences/sequences-beta5.0-nsus20.0-runs20000.fasta' for pdb in structures]
-    msa.seq_to_logo(msas,structures):
+    structures = [ '1XOB']
+    msas = [execution_folder + pdb + '/optimization/curated_sequences/sequences-beta5.0-nsus20.0-runs20000_copy.fasta' for pdb in structures]
+    msa.seq_to_logo_msas(msas,structures)
     
+    structures = [ '2TRX']
+    msas = [execution_folder + pdb + '/optimization/curated_sequences/sequences-beta7.0-nsus20.0-runs20000_copy.fasta' for pdb in structures]
+    msa.seq_to_logo_msas(msas,structures)
+    
+#conservation_conformeros()
+def plot_conformers_contacts():
+    execution_folder = constants.data_path + "THIO_ECOLI_4_107_CONFORMERS/"
+    structures = [ '1XOA', '1XOB', '2H74','1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17','2TRX']
+    contact_maps_paths = [execution_folder + pdb + '/contact_map_sync.dat' for pdb in structures]
+    contact_map_path = execution_folder + 'sum_contact_map.dat'
+    output = execution_folder + "contacts_shared_b_cof.png"
+    cmap_sum = util.load_contact_map(contact_map_path)
+    import numpy as np 
+    mat = np.zeros((8, 8))
+    sum_total=float(np.count_nonzero(cmap_sum>=1))
+    prom = 0
+    cant=0
+    for i in range(len(structures)):
+        for j in range((i+1), len(structures)):  
+            print(structures[i])
+            print(structures[j])
+            total_pair=util.contacts_match(contact_maps_paths[i],contact_maps_paths[j])
+            val=round(total_pair * 100 / sum_total,2)
+            prom = prom + val
+            mat[i,j]=val
+            mat[j,i]=val
+            cant=cant+1
+    print prom / cant
+    x=['', '1XOA', '1XOB', '2H74','1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17','2TRX']
+    y=['', '1XOA', '1XOB', '2H74','1XOB_M5','1XOB_M7','1XOB_M16','1XOA_M17','2TRX']
+    plot.conformers_contact(mat,x,y,output)       
+#plot_conformers_contacts() 
+    
+    
+def evol_family():
+    execution_folder = constants.data_path + "FAMILY_PF00085/"
+    families = [ 'PF00085']
+    evol.evol_families(families, execution_folder)   
+#evol_family()
+
+def analisys_family():
+    execution_folder = constants.data_path + "FAMILY_PF00085/"
+    families = [ 'PF00085']
+    evol.analisys_families(families, execution_folder)   
+analisys_family()  
