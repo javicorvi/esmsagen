@@ -1,0 +1,15 @@
+biopython
+pandas
+scikit-learn
+numpy
+scipy
+matplotlib
+
+apt-get install python-tk
+
+sudo apt-get install cd-hit
+
+
+****
+julia 
+Pkg.add("GaussDCA")

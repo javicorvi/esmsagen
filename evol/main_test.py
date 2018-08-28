@@ -149,13 +149,13 @@ def plot_conformers_contacts():
     
     
 def evol_family():
-    execution_folder = constants.data_path + "FAMILY_PF00085/"
+    execution_folder = constants.data_path + "FAMILIES/"
     families = [ 'PF00085']
     evol.evol_families(families, execution_folder)   
-#evol_family()
+evol_family()
 
 def analisys_family():
-    execution_folder = constants.data_path + "FAMILY_PF00085/"
+    execution_folder = constants.data_path + "FAMILIES/"
     families = [ 'PF00085']
     evol.analisys_families(families, execution_folder)   
-analisys_family()  
+#analisys_family()  

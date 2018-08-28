@@ -821,7 +821,7 @@ def analisys_family(family, execution_folder):
     pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
     df_new = pandas.DataFrame()
     for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
-        if(pdb_protein_to_evolve['status'] == 'okey_evol_nuevo'):
+        if(pdb_protein_to_evolve['status'] == 'evol_2'):
             pdb_name = pdb_protein_to_evolve['pdb']
             file_name_pdb = pdb_protein_to_evolve['seq'].replace("/", "_").replace("-", "_") + "_" + pdb_protein_to_evolve['pdb'] + "_" + pdb_protein_to_evolve['chain']
             complete_file_name_pdb = pdb_paths_files + "/" + file_name_pdb
@@ -909,7 +909,7 @@ def evol_family(family, execution_folder):
                 #cd_secuence = util.getSequence(msa_file_name_fasta, "CRBB1_HUMAN/150-232")
                 # start_residue = int(pdb_protein_to_evolve['seq'][pdb_protein_to_evolve['seq'].index("/")+1:pdb_protein_to_evolve['seq'].index("-")]) 
                 # end_residue = int(pdb_protein_to_evolve['seq'][pdb_protein_to_evolve['seq'].index("-")+1:]) 
-                if(pdb_protein_to_evolve['status'] != 'okey_evol_nuevo'):
+                if(pdb_protein_to_evolve['status'] != 'evol_3'):
                     #residue_position, residue_name = util.getPDBSequence(pdb_name, pdb_file_complete, chain_name)
                     start_residue, end_residue = util.find_pdb_start_end_for_protein(msa_complete_filename_stock, pdb_protein_to_evolve['seq'], pdb_name, chain_name)
                     # pdb_to_evol_df.set_value(index,"start_residue",start_residue)
@@ -920,7 +920,7 @@ def evol_family(family, execution_folder):
                     optimize_evolution(pdb_folder+"/", protein, pdb_name, chain_name, synchronized=False, pdb_path_=pdb_file_complete_filename_to_evolve)
                 
                 
-                pdb_to_evol_df.set_value(index, "status", "okey_evol_nuevo")
+                pdb_to_evol_df.set_value(index, "status", "evol_3")
                 logging.info('End of the PDB ' + file_name_pdb)
             except Exception as inst:
                 print inst
@@ -928,7 +928,7 @@ def evol_family(family, execution_folder):
                 print x
                 logging.error('The PDB was not evolutionated ' + file_name_pdb)
                 logging.error(inst)
-                pdb_to_evol_df.set_value(index, "status", "error")
+                pdb_to_evol_df.set_value(index, "status", "error_evol_2")
             pdb_to_evol_df.to_csv(family_pdb_evol_info_path)        
 
     
