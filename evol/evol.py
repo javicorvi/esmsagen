@@ -407,7 +407,6 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     frob_data_path = curated_sequences_path + "frob/"
     psicov_data_path = curated_sequences_path + "psicov/"
     
-    
     curated_sequences_result = curated_sequences_path + "resuts.csv"
     optimization_result = optimization_folder + "optimization.csv"
     
@@ -418,13 +417,11 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     
     conservation_path = curated_sequences_path_best_results + "conservation/"
     
-    
     if not os.path.exists(curated_sequences_path_best_results):
         os.makedirs(curated_sequences_path_best_results)   
     
     if not os.path.exists(conservation_path):
         os.makedirs(conservation_path)   
-    
     
     columns = ["method", "auc_01", "beta", "nsus", "runs"]
     best_01_coev_values = pandas.DataFrame(columns=columns)
@@ -443,9 +440,6 @@ def analyse_optimus_msa(execution_folder, pdb_name, natural_result_path):
     best_coev_values.at[1,'beta']=beta 
     best_coev_values.at[1,'nsus']=nsus 
     best_coev_values.at[1,'runs']=runs
-    
-    
-    
     
     curated_result_df = pandas.read_csv(optimization_result, header=0, index_col=0)
     curated_result_df=curated_result_df.sort_values(["auc_01_mi"],ascending=False)
@@ -809,10 +803,29 @@ def analisys_families(families, input_families_folder):
     logging.info('Begin of the execution process')
     start_time = time.time()
     for family in families:
-        analisys_family(family, input_families_folder)
+        #analisys_family(family, input_families_folder)
+        conservation_family(family, input_families_folder)
     logging.info('End of the execution process')
     logging.info('Time of Execution --- %s seconds ---' % (time.time() - start_time))      
 
+def conservation_family(family, execution_folder):
+    family_path = execution_folder + family
+    pdb_paths_files =  family_path + "/PDB/"
+    family_pdb_evol_info_path = family_path + "/PF00085" + "_evol_info.csv"
+    pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
+    msas_summary=[]
+    for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
+        if(pdb_protein_to_evolve['status'] == 'evol_3'):
+            msa_path = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/clustered_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster"
+            logging.debug("Conservation of protein processed : " + msa_path)
+            output = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/clustered_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster_information_content.csv"
+            try:
+                #msa.summary(msa_path, output, 'title')
+                msas_summary.append(output)
+            except Exception as inst:
+                logging.error('Conservation error with file  ' + msa_path)
+    msa.conservation_media(msas_summary,  execution_folder + family + "/conservation_media.csv" )
+    msa.conservation_media_2(msas_summary,  execution_folder + family + "/conservation_media_2.csv" )
 def analisys_family(family, execution_folder):
     family_path = execution_folder + family
     pdb_paths_files =  family_path + "/PDB/"
@@ -829,9 +842,10 @@ def analisys_family(family, execution_folder):
             result_opt = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/optimization.csv"
             df_result = pandas.read_csv(result_opt)
             df_new=df_new.append(df_result)
-            
-            
     df_new.to_csv("/home/jcorvi/result_family.csv")
+    
+       
+    
     
 def evol_family(family, execution_folder):
     # todo manejar errores

@@ -461,7 +461,6 @@ def conservation_media(msas_summary, output):
     i=0
     for summary in msas_summary:
         df = pandas.read_csv(summary, usecols=['Entropy'])
-        print (df)
         if(i==0):
             entropy_media = df['Entropy'].tolist()
         else:
@@ -469,4 +468,29 @@ def conservation_media(msas_summary, output):
         i=i+1
     entropy_media =   [x / i  for x in entropy_media]
     df = pandas.DataFrame(entropy_media,columns=['Entropy'])
+    df.to_csv(output)
+
+'''
+Calcula la conservacion media
+'''    
+def conservation_media_2(msas_summary, output):    
+    entropy_media=[]
+    i=0
+    for summary in msas_summary:
+        df = pandas.read_csv(summary)
+        if(i==0):
+            entropy_media = df['Entropy'].tolist()
+            freq_a = df['A'].tolist()
+            freq_c = df['C'].tolist()
+            #A    C    E    D    G    F    I    H    K    M    L    N    Q    P    S    R    T    W    V    Y    Entropy
+        else:
+            entropy_media = [x + y for x, y in zip(entropy_media , df['Entropy'].tolist() )]
+            freq_a = [x + y for x, y in zip(freq_a , df['A'].tolist() )]
+            freq_c = [x + y for x, y in zip(freq_a , df['C'].tolist() )]
+        i=i+1
+    entropy_media =   [x / i  for x in entropy_media]
+    freq_a =   [x / i  for x in freq_a]
+    freq_c =   [x / i  for x in freq_c]
+    
+    df = pandas.DataFrame([entropy_media,freq_a, freq_c ],columns=['Entropy','A','C'])
     df.to_csv(output)
