@@ -803,29 +803,76 @@ def analisys_families(families, input_families_folder):
     logging.info('Begin of the execution process')
     start_time = time.time()
     for family in families:
+        #analisys evolution with no synchronization
         #analisys_family(family, input_families_folder)
+        #generate_zync_msa_from_pdb_aligment(family, input_families_folder)
         conservation_family(family, input_families_folder)
     logging.info('End of the execution process')
     logging.info('Time of Execution --- %s seconds ---' % (time.time() - start_time))      
-
+    
+def generate_zync_msa_from_pdb_aligment(family, execution_folder):
+    family_path = execution_folder + family
+    pdb_paths_files =  family_path + "/PDB/"
+    family_pdb_evol_info_path = family_path + "/PF00085" + "_evol_info.csv"
+    pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
+    
+    for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
+        if(pdb_protein_to_evolve['status'] == 'evol_3'):
+            optimization_folder = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/"
+            sincronized_evol_path = optimization_folder + "synchronized_sequences/"
+            if not os.path.exists(sincronized_evol_path):
+                os.makedirs(sincronized_evol_path) 
+            clustered_sequences_path = optimization_folder + "clustered_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster"
+            logging.debug('Synchronization of  ' + clustered_sequences_path)
+            sincronized_evol_path = sincronized_evol_path + "sequences-beta7.0-nsus20.0-runs20000.fasta.cluster"
+            pdb_file_complete_filename_to_evolve = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/" + pdb_protein_to_evolve['pdb_folder_name'] + "_clean.pdb"
+            pdb_cutted_path = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/" + pdb_protein_to_evolve['pdb_folder_name'] + "_superimposed.pdb"
+            contact_map = optimization_folder + "contact_map.dat"
+            contact_map_sync = optimization_folder + "contact_map_sync.dat"  
+            
+            try:
+                util.synchronize_evol_with_cutted_pdb_singular(pdb_file_complete_filename_to_evolve, pdb_cutted_path, clustered_sequences_path, sincronized_evol_path, contact_map, contact_map_sync)
+            except Exception as inst:
+                logging.error("error sincronizando la proteina " + clustered_sequences_path)    
 def conservation_family(family, execution_folder):
     family_path = execution_folder + family
+    msa.summary(family_path + "/PF00085.fasta", family_path + "/PF00085_information_content.csv", 'title')
     pdb_paths_files =  family_path + "/PDB/"
     family_pdb_evol_info_path = family_path + "/PF00085" + "_evol_info.csv"
     pdb_to_evol_df = pandas.read_csv(family_pdb_evol_info_path, header=0, index_col='cluster')    
     msas_summary=[]
     for index, pdb_protein_to_evolve in pdb_to_evol_df.iterrows():
         if(pdb_protein_to_evolve['status'] == 'evol_3'):
-            msa_path = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/clustered_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster"
+            msa_path = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/synchronized_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster"
             logging.debug("Conservation of protein processed : " + msa_path)
-            output = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/clustered_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster_information_content.csv"
+            output = pdb_paths_files + pdb_protein_to_evolve['pdb_folder_name'] + "/optimization/synchronized_sequences/sequences-beta7.0-nsus20.0-runs20000.fasta.cluster_information_content.csv"
             try:
                 #msa.summary(msa_path, output, 'title')
                 msas_summary.append(output)
             except Exception as inst:
                 logging.error('Conservation error with file  ' + msa_path)
-    msa.conservation_media(msas_summary,  execution_folder + family + "/conservation_media.csv" )
-    msa.conservation_media_2(msas_summary,  execution_folder + family + "/conservation_media_2.csv" )
+    #msa.conservation_media(msas_summary,  execution_folder + family + "/conservation_media.csv" )
+    
+    msa.frequency_and_conservation_media(msas_summary,  execution_folder + family + "/information_contect_evol_media.csv" )
+    
+    #msa.conservation_media_2(msas_summary,  execution_folder + family + "/conservation_media_2.csv" )
+    
+    
+    msas_entropy=[]
+    df_c = pandas.read_csv(execution_folder + family + "/conservation_media.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Evol', 'red'])
+    df_c = pandas.read_csv(family_path + "/PF00085_information_content.csv", usecols=['Entropy'])
+    l=df_c['Entropy'].tolist()
+    l.insert(0, None)
+    msas_entropy.append([l, 'Natural', 'blue'])
+    plot.conservation_comparation(msas_entropy, family_path + "/conservation_media_with_natural.png", 'Conservation Natural MSA and Evol MSA')
+    
+    
+    #msa.seq_to_logo(family_path + "/PF00085.fasta", 'Natural Logo For Famili'+ family)
+    
+    
 def analisys_family(family, execution_folder):
     family_path = execution_folder + family
     pdb_paths_files =  family_path + "/PDB/"
@@ -995,11 +1042,7 @@ def analyse_top_coevolution_conformers(execution_folder,structures,sum_contact_m
                 [r.pop(2) for r in psicov_evol]
                 [r.pop(2) for r in psicov_evol]
                 psicov_coev.append(psicov_evol)
-    
-    
-    
-    
-    
+     
     natural_mi_result_path = natural_result_path + "mi.csv"
     natural_frob_result_path = natural_result_path + "frob.csv"
     natural_di_result_path= natural_result_path + "di.csv"

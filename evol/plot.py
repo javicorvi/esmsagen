@@ -379,8 +379,8 @@ def conservation_comparation(msas_entropy, output_file, title):
     
     #np.arange(min(x), max(x)+1, 1.0)
     
-    plt.axis([0, 106, 0, 7])
-    plt.xticks(np.arange(0, 106, 5.0))
+    plt.axis([0, 70, 0, 7])
+    plt.xticks(np.arange(0, 70, 5.0))
     plt.title(title)
     plt.savefig(output_file)
     #plt.show()  

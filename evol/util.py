@@ -174,7 +174,6 @@ Recibe el pdf recortado con las posiciones que deben mantenerse luego elimina la
 '''
 def synchronize_evol_with_cutted_pdb_singular(pdb_complete_path, pdb_cutted_path, clustered_sequences_path, sincronized_evol_path, contact_map_path, sincronized_contact_map):
     start_time = time.time()
-    print "sincronize_natural_evol_alignments"  
     start = find_first_residue(pdb_complete_path)
     df_columnas = pandas.read_csv(pdb_cutted_path, delim_whitespace=True,header=None,usecols=[5])
     df_columnas=df_columnas.dropna()
@@ -201,8 +200,8 @@ def synchronize_evol_with_cutted_pdb_singular(pdb_complete_path, pdb_cutted_path
     cmap_sync=cmap[np.ix_(df_columnas[5].tolist(),df_columnas[5].tolist())]
     save_contact_map(cmap_sync, sincronized_contact_map)        
     
-    print "sincronize_natural_evol_alignments"
-    print("--- %s seconds ---" % (time.time() - start_time))
+    
+    #print("--- %s seconds ---" % (time.time() - start_time))
 
 import random
 import string 

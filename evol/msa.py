@@ -184,7 +184,7 @@ def msa_information(input_msa, output_msa, msa_name):
 def seq_to_logo(msa,title):
     print "seq to logo"
     import subprocess 
-    #subprocess.call("../lib/seq2logo-2.0/Seq2Logo.py -f " + msa + " -o "+msa+'_logo'+" -I 2 -u Bits -t '"+title+"' --format 'JPEG,PNG,SVG,PDF'", shell=True)
+    subprocess.call("../lib/seq2logo-2.0/Seq2Logo.py -f " + msa + " -o "+msa+'_logo.png'+" -I 2 -u Bits -t '"+title+"' --format 'JPEG,PNG,SVG,PDF'", shell=True)
     print "end"
 
 
@@ -460,12 +460,15 @@ def conservation_media(msas_summary, output):
     entropy_media=[]
     i=0
     for summary in msas_summary:
-        df = pandas.read_csv(summary, usecols=['Entropy'])
-        if(i==0):
-            entropy_media = df['Entropy'].tolist()
-        else:
-            entropy_media = [x + y for x, y in zip(entropy_media , df['Entropy'].tolist() )]
-        i=i+1
+        try:
+            df = pandas.read_csv(summary, usecols=['Entropy'])
+            if(i==0):
+                entropy_media = df['Entropy'].tolist()
+            else:
+                entropy_media = [x + y for x, y in zip(entropy_media , df['Entropy'].tolist() )]
+            i=i+1
+        except Exception as inst:
+            logging.error('Conservation error with file  ' + summary)    
     entropy_media =   [x / i  for x in entropy_media]
     df = pandas.DataFrame(entropy_media,columns=['Entropy'])
     df.to_csv(output)
@@ -473,24 +476,102 @@ def conservation_media(msas_summary, output):
 '''
 Calcula la conservacion media
 '''    
-def conservation_media_2(msas_summary, output):    
+def frequency_and_conservation_media(msas_summary, output):    
+    columns_df=['A','C','E','D','G','F','I','H','K','M','L','N','Q','P','S','R','T','W','V','Y','Entropy']
     entropy_media=[]
     i=0
     for summary in msas_summary:
-        df = pandas.read_csv(summary)
-        if(i==0):
-            entropy_media = df['Entropy'].tolist()
-            freq_a = df['A'].tolist()
-            freq_c = df['C'].tolist()
-            #A    C    E    D    G    F    I    H    K    M    L    N    Q    P    S    R    T    W    V    Y    Entropy
-        else:
-            entropy_media = [x + y for x, y in zip(entropy_media , df['Entropy'].tolist() )]
-            freq_a = [x + y for x, y in zip(freq_a , df['A'].tolist() )]
-            freq_c = [x + y for x, y in zip(freq_a , df['C'].tolist() )]
-        i=i+1
+        try:
+            df = pandas.read_csv(summary,usecols=columns_df)
+            if(i==0):
+                entropy_media = df['Entropy'].tolist()
+                freq_a = df['A'].tolist()
+                freq_c = df['C'].tolist()
+                freq_e = df['E'].tolist()
+                freq_d = df['D'].tolist()
+                freq_g = df['G'].tolist()
+                freq_f = df['F'].tolist()
+                freq_i = df['I'].tolist()
+                freq_h = df['H'].tolist()
+                freq_k = df['K'].tolist()
+                freq_m = df['M'].tolist()
+                freq_l = df['L'].tolist()
+                freq_n = df['N'].tolist()
+                freq_q = df['Q'].tolist()
+                freq_p = df['P'].tolist()
+                freq_s = df['S'].tolist()
+                freq_r = df['R'].tolist()
+                freq_t = df['T'].tolist()
+                freq_w = df['W'].tolist()
+                freq_v = df['V'].tolist()
+                freq_y = df['Y'].tolist()
+            else:
+                entropy_media = [x + y for x, y in zip(entropy_media , df['Entropy'].tolist() )]
+                freq_a = [x + y for x, y in zip(freq_a , df['A'].tolist() )]
+                freq_c = [x + y for x, y in zip(freq_c , df['C'].tolist() )]
+                freq_e = [x + y for x, y in zip(freq_e , df['E'].tolist() )]
+                freq_d = [x + y for x, y in zip(freq_d , df['D'].tolist() )]
+                freq_g = [x + y for x, y in zip(freq_g , df['G'].tolist() )]
+                freq_f = [x + y for x, y in zip(freq_f , df['F'].tolist() )]
+                freq_i = [x + y for x, y in zip(freq_i , df['I'].tolist() )]
+                freq_h = [x + y for x, y in zip(freq_h , df['H'].tolist() )]
+                freq_k = [x + y for x, y in zip(freq_k , df['K'].tolist() )]
+                freq_m = [x + y for x, y in zip(freq_m , df['M'].tolist() )]
+                freq_l = [x + y for x, y in zip(freq_l , df['L'].tolist() )]
+                freq_n = [x + y for x, y in zip(freq_n , df['N'].tolist() )]
+                freq_q = [x + y for x, y in zip(freq_q , df['Q'].tolist() )]
+                freq_p = [x + y for x, y in zip(freq_p , df['P'].tolist() )]
+                freq_s = [x + y for x, y in zip(freq_s , df['S'].tolist() )]
+                freq_r = [x + y for x, y in zip(freq_r , df['R'].tolist() )]
+                freq_t = [x + y for x, y in zip(freq_t , df['T'].tolist() )]
+                freq_w = [x + y for x, y in zip(freq_w , df['W'].tolist() )]
+                freq_v = [x + y for x, y in zip(freq_v , df['V'].tolist() )]
+                freq_y = [x + y for x, y in zip(freq_y , df['Y'].tolist() )]
+            i=i+1
+        except Exception as inst:
+            logging.error('Conservation error with file  ' + summary)    
     entropy_media =   [x / i  for x in entropy_media]
     freq_a =   [x / i  for x in freq_a]
     freq_c =   [x / i  for x in freq_c]
-    
-    df = pandas.DataFrame([entropy_media,freq_a, freq_c ],columns=['Entropy','A','C'])
-    df.to_csv(output)
+    freq_e =   [x / i  for x in freq_e]
+    freq_d =   [x / i  for x in freq_d]
+    freq_g =   [x / i  for x in freq_g]
+    freq_f =   [x / i  for x in freq_f]
+    freq_i =   [x / i  for x in freq_i]
+    freq_h =   [x / i  for x in freq_h]
+    freq_k =   [x / i  for x in freq_k]
+    freq_m =   [x / i  for x in freq_m]
+    freq_l =   [x / i  for x in freq_l]
+    freq_n =   [x / i  for x in freq_n]
+    freq_q =   [x / i  for x in freq_q]
+    freq_p =   [x / i  for x in freq_p]
+    freq_s =   [x / i  for x in freq_s]
+    freq_r =   [x / i  for x in freq_r]
+    freq_t =   [x / i  for x in freq_t]
+    freq_w =   [x / i  for x in freq_w]
+    freq_v =   [x / i  for x in freq_v]
+    freq_y =   [x / i  for x in freq_y]
+    data = pandas.DataFrame(
+    {'A': freq_a,
+     'C': freq_c,
+     'E': freq_e,
+     'D': freq_d,
+     'G': freq_g,
+     'F': freq_f,
+     'I': freq_i,
+     'H': freq_h,
+     'K': freq_k,
+     'M': freq_m,
+     'L': freq_l,
+     'N': freq_n,
+     'Q': freq_q,
+     'P': freq_p,
+     'S': freq_s,
+     'R': freq_r,
+     'T': freq_t,
+     'W': freq_w,
+     'V': freq_v,
+     'Y': freq_y
+    })
+    df = pandas.DataFrame(data)
+    df.to_csv(output, sep='\t', index=False)
